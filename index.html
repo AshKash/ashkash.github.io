@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Welcome to Ashwin's page</title>
+<meta http-equiv="Content-Language" content="English" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+</head>
+<body>
+<div id="wrap">
+
+<div id="top"></div>
+
+<div id="content">
+
+<div class="header">
+<h1><a href="#">Welcome!</a></h1>
+<h2>I.U.R.T - Infrequently Updated Random Things...</h2>
+</div>
+
+<!--
+<div class="breadcrumbs">
+<a href="#">Home</a> &middot; You are here
+</div>
+-->
+
+<div class="middle">
+
+<h1>About</h1>
+<hr>
+<p>I graduated in 2003 from <a href="http://www.rutgers.edu">Rutgers</a> with a
+Masters degree in <a href="http://www.cs.rutgers.edu">Computer Science</a>
+I worked with <a href="http://www.cs.rutgers.edu/~badri">Prof. Badri</a> as
+a graduate research assistant. My <a href="http://www.linkedin.com/in/cybernytrix">
+LinkedIn profile</a>.
+
+<p align="center">&nbsp;</p>
+
+<img width="100%" src="images/skydive.jpg" alt="Sky's the limit!">
+			
+<h1>Projects past...</h1>
+<hr>
+<p>Some ideas / projects, some half-backed, some nostalgic that I have worked on.
+</p>
+
+<h2><a href="ajaxcrypt/index.html">AjaxCrypt</a></h2>
+<p>
+AjaxCrypt is a Javascript based proof of concept alternative to HTTPS. 
+It uses a combination of AJAX requests, HTTPS and window.postMessage() to implement a 
+<a href="http://en.wikipedia.org/wiki/Man-in-the-middle_attack">man-in-the-middle</a> 
+resistant alternative to HTTPS. 
+<a href="ajaxcrypt/index.html">Click here</a> for more information.
+</p>
+
+<h2><a href="kab/index.html">Stop AD Blocking</a></h2>
+<p>
+Proof of concept to prevent use of <a href="http://adblockplus.org/en/">AdBlock Plus</a>.
+The idea is to encrypt page contents which can only be decrypted with a secret 
+key sent with the AD. In order for this to work you (unfortunately) need support 
+from your AD provider. 
+Click <a href="kab/index.html">here</a> for demo and more information.
+</p>
+
+<h2><a href="putty/">Putty patches</a></h2>
+<p>
+I use <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/">PuTTY</a> and 
+<a href="http://winscp.net/eng/index.php">WinSCP</a>, one thing I really miss
+is to be able to open WinSCP from the current PuTTY sesion. I patched PuTTY to
+implement this feature, you can download the <a href="putty/">code here</a>.
+</p>
+
+<h2><a href="misc_projs/ebt_vnat.html">ebt_vnat patches</a></h2>
+<p>
+This is totally experimental! This module will add a VLAN tag to
+wireless packets based on the SSID it was received on. I submitted this
+as patches to ebtables for Linux 2.4. You might have to
+do some porting to make it work again.
+</p>
+
+<h2><a href="misc_projs/tbf.pdf">Trajectory Based Forwarding</a></h2>
+<p>Trajectory Based Forwarding is a new routing protocol for
+sensor networks. The nodes in the network are assumed to be location aware and
+all packets carry an encoded "trajectory" that describes the path the
+packet must follow. Some obvious advantages are decoupling the node id
+from the path, which is good for mobile networks. You can read the
+paper <a href="http://www.research.rutgers.edu/~dnicules/research/tbf/tbftr.pdf">
+here</a>. Andrew, Mike and me implemented this on Berkeley Motes
+running <a href="http://www.tinyos.net/">TinyOS</a>. You can read the 
+<a href="misc_projs/tbf.pdf">report</a> or <a href="misc_projs/tbf.tgz">
+download</a> the code [.tgz].
+</p>
+
+<h2>Adhoc Positioning System</h2>
+<p>
+Ad hoc Positioning System is a new algorithm to enable Motes to know
+about their geographic location without using GPS. You can read about
+the paper <a href="http://www.cs.rutgers.edu/~dnicules/research/aps/aps.html">here</a>.
+I have implemented one of these protocols on the Motes.
+I also designed and implemented a querying protocol which basically
+enables us to get/set the protocol state on the Mote. There is also a
+nice <a href="misc_projs/aps-demo.gif">
+TCL/TK GUI</a> that maps out the given sensor field in 2D and it is
+possible to graphically query different properties of each node in the
+sensor field. <a href="misc_projs/aps-demo.tgz">Download</a> the code [.tgz].
+</p>
+
+<h2>SLIP Simulator</h2>
+<p>
+Slip Simulator - Motes can be emulated in software and its UART can be
+accessed via a socket. We also have a working UDP/IP stack for the
+Motes. While developing protocols, it is useful to have some sort of a
+simulation framework. Slip simulator does this. Basically, it does FD
+forwarding between a socket and TTY-pair, one side of which is attached
+to the SLIP protocol using slattach. 
+<a href="misc_projs/slip_sim.tgz">Download</a> the code [.tgz].
+</p>
+
+<h2>Colored range searching</h2>
+<p>
+Interesting DB project - colored range searching is a problem that arises 
+in spatial databases, network routing, document retrieval, and sub-string indexing.
+You can read the full <a href="db_project/Report.pdf">report</a> (PDF) or
+<a href="db_project/db_proj.tgz">download</a> the code to re-run the experiments. 
+</p>
+
+<h2>OS project code</h2>
+<p>
+Some naive old code I wrote for the OS course to implement networked file systems.
+<a href="misc_projs/rfs2.tgz">Download</a> the code here.
+</p>
+
+<h2>Mote Gateway</h2>
+<p>
+This was my maiden project at <a href="http://www.cs.rutgers.edu/~badri/dataman/">
+The Dataman Lab</a>! Motes are tiny
+wireless devices with sensors, you can find more information about motes are the
+<a href="http://www.tinyos.net/">Berkeley TinyOS</a> website. 
+This project enables multiple clients to query a Sensor network over the internet.
+<a href="misc_projs/mote-gw.tgz">Download</a> the code [.tgz].
+</p>
+
+<h2>Mp3Spider</h2>
+<p>
+<a href="old/free_software/mp3Spider/index.html">mp3Spider</a> 
+is a Java based crawler, which crawls all shared files in a
+windows network, I wrote it so that I can search for mp3 files in my
+office network. </p>
+
+<h1>Some less geeky stuff...</h1>
+<hr>
+<h2>Intro-Churchill's speech (mp3 From Live after Death)</h2>
+<center>
+<a href="http://www.ironmaiden.com">
+<img src="images/smiley_ed.gif" alt="Smiley Ed">
+<br>
+<img src="images/maidentitle5.gif" alt="Iron Maiden - Title">
+</a>
+<pre>
+We shall go on to the end,
+we shall fight in France,
+we shall fight on the seas
+and the oceans,
+we shall fight with growing confidence 
+and growing strength in the air,
+we shall defend our Island,
+whatever the cost may be,
+we shall fight on the beaches,
+we shall fight on the landing grounds,
+we shall fight in the fields
+and in the streets,
+we shall fight in the hills;
+we shall never surrender
+</center>
+</pre>
+
+</div>
+		
+<div class="right">
+		
+<h1>Miscellaneous</h1>
+<ul>
+<li> <a href="http://www.chris-lott.org/misc/kaiser.html">
+You and your Research (Dr. Richard Hamming)</a>
+</li>
+
+<li><a href="http://www.xkcd.com">XKCD webcomic</a>
+</li>
+
+<li><a href="http://www.calvinandhobbes.com">Calvin & Hobbes - My favorite </a>
+</li>
+
+<li><a href="http://www.dilbert.com/comics/dilbert/archive/">
+Month of Dilbert - My other favorite</a>
+</li>
+
+<li><a href="http://www.nightgarden.com/shannon.htm">Shannonizer
+Type in a sentence and the software
+re-writes in the style you choose - Lewis Carol, Mark Twain...</a>
+</li>
+
+<li><a href="http://www.bmsce.in/">BMSCE - my undergrad college website</a>
+</li>
+
+</ul>
+		
+</div>
+
+<div id="clear"></div>
+
+</div>
+
+<div id="bottom"></div>
+
+</div>
+
+<div id="footer">
+Page last updated: Some time ago...
+</div>
+
+</body>
+</html>

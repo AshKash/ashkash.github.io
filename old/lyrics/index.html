@@ -1,0 +1,593 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Rock-a-lyrics</title>
+<meta name="Microsoft Theme" content="artsy 111, default">
+<meta name="Microsoft Border" content="tlb, default">
+</head>
+
+<script language=javascript>
+
+// cross browser compatibility shit
+function writeit(text, id) {
+	if (document.getElementById) { 
+		x = document.getElementById(id);
+		x.innerHTML = text;
+
+	} else if (document.all) {
+		x = document.all[id];
+		x.innerHTML = text;
+
+	} else if (document.layers) {
+		x = document.layers[id + "Layer"];
+		x.document.write(text);
+		x.document.close();
+	}
+}
+
+/*
+ * FILE: listanchors.js
+ * The function listanchors() is passed a document as its argument, and
+ * opens a new window to serve as a "navigation window" for that
+ * document. The new window displays a list of all anchors in the document.
+ * Clicking on any anchor in the list causes the document to scroll to 
+ * the position of that anchor.
+ */
+
+// First, figure out what browser we're running in.
+// Assume Navigator, but check for IE. We assume version 4 of either.
+listanchors.nav = true;  
+if (navigator.appName.indexOf("Microsoft") != -1) listanchors.nav = false;
+
+// Now define the function. Pass the document that is to have its anchors
+// listed as the sole argument. Call it once the document is fully (or
+// mostly) parsed, not at the beginning of the document.
+function listanchors(d, id) {
+    // List all anchors.
+
+	var fulltxt = "";
+    for(var i = 0; i < d.anchors.length; i++) {
+    	// For each anchor object, determine the text to display. 
+		// First, try to get the text between <A> and </A> using a 
+		// browser-dependent property. If none, use the name instead.
+      	 var text;
+        var a = d.anchors[i];
+		if (listanchors.nav) text = a.text;  // Navigator 4
+   	    else text = a.innerText;             // Internet Explorer 4
+		if ((text == null) || (text == '')) text = a.name;
+
+		// Now output that text as a link. Note the use of the location
+		// property of the original window.
+		fulltxt = fulltxt + '<A HREF="#' + a.name + '">' + text +
+       			'</A><BR>';
+    }
+    writeit(fulltxt, id);
+}
+
+</script>
+
+<body background="../_themes/artsy/arttilea.jpg" bgcolor="#000033" text="#FFFF99" link="#FFCC00" vlink="#999966" alink="#66FF00"><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td><!--mstheme--><font face="Arial, Helvetica">
+
+<p align="center"><img src="_derived/index.html_cmp_artsy110_bnr.gif" width="600" height="60" border="0" alt="Lyrics and Poems"></p>
+<p align="center"><nobr>[&nbsp;<a href="../index.html">Home</a>&nbsp;]</nobr> <nobr>[&nbsp;<a href="../favorite.htm">Favorites</a>&nbsp;]</nobr> <nobr>[&nbsp;<a href="../interests/index.html">Interests</a>&nbsp;]</nobr> <nobr>[&nbsp;<a href="../research/index.html">Research&nbsp;Interests</a>&nbsp;]</nobr> <nobr>[&nbsp;<a href="../photos/index.html">Photo&nbsp;Album</a>&nbsp;]</nobr> <nobr>[&nbsp;<a href="../free_software/index.html">Free&nbsp;Software</a>&nbsp;]</nobr> <nobr>[&nbsp;Lyrics&nbsp;and&nbsp;Poems&nbsp;]</nobr></p>
+<!--msthemeseparator--><p align="center"><img src="../_themes/artsy/arthsepa.gif" width="600" height="10"></p>
+
+<!--mstheme--></font></td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" width="1%"><!--mstheme--><font face="Arial, Helvetica">
+
+<p><script language="JavaScript"><!--
+MSFPhover = 
+  (((navigator.appName == "Netscape") && 
+  (parseInt(navigator.appVersion) >= 3 )) || 
+  ((navigator.appName == "Microsoft Internet Explorer") && 
+  (parseInt(navigator.appVersion) >= 4 ))); 
+function MSFPpreload(img) 
+{
+  var a=new Image(); a.src=img; return a; 
+}
+// --></script><script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav1n=MSFPpreload("../_derived/home_cmp_artsy110_vbtn.gif"); MSFPnav1h=MSFPpreload("../_derived/home_cmp_artsy110_vbtn_a.gif"); }
+// --></script><a href="../index.html" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav1'].src=MSFPnav1h.src" onmouseout="if(MSFPhover) document['MSFPnav1'].src=MSFPnav1n.src"><img src="../_derived/home_cmp_artsy110_vbtn.gif" width="140" height="60" border="0" alt="Home" name="MSFPnav1"></a><br><script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav2n=MSFPpreload("../_derived/favorite.htm_cmp_artsy110_vbtn.gif"); MSFPnav2h=MSFPpreload("../_derived/favorite.htm_cmp_artsy110_vbtn_a.gif"); }
+// --></script><a href="../favorite.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav2'].src=MSFPnav2h.src" onmouseout="if(MSFPhover) document['MSFPnav2'].src=MSFPnav2n.src"><img src="../_derived/favorite.htm_cmp_artsy110_vbtn.gif" width="140" height="60" border="0" alt="Favorites" name="MSFPnav2"></a><br><script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav3n=MSFPpreload("../interests/_derived/index.html_cmp_artsy110_vbtn.gif"); MSFPnav3h=MSFPpreload("../interests/_derived/index.html_cmp_artsy110_vbtn_a.gif"); }
+// --></script><a href="../interests/index.html" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav3'].src=MSFPnav3h.src" onmouseout="if(MSFPhover) document['MSFPnav3'].src=MSFPnav3n.src"><img src="../interests/_derived/index.html_cmp_artsy110_vbtn.gif" width="140" height="60" border="0" alt="Interests" name="MSFPnav3"></a><br><script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav4n=MSFPpreload("../research/_derived/index.html_cmp_artsy110_vbtn.gif"); MSFPnav4h=MSFPpreload("../research/_derived/index.html_cmp_artsy110_vbtn_a.gif"); }
+// --></script><a href="../research/index.html" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav4'].src=MSFPnav4h.src" onmouseout="if(MSFPhover) document['MSFPnav4'].src=MSFPnav4n.src"><img src="../research/_derived/index.html_cmp_artsy110_vbtn.gif" width="140" height="60" border="0" alt="Research Interests" name="MSFPnav4"></a><br><script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav5n=MSFPpreload("../photos/_derived/index.html_cmp_artsy110_vbtn.gif"); MSFPnav5h=MSFPpreload("../photos/_derived/index.html_cmp_artsy110_vbtn_a.gif"); }
+// --></script><a href="../photos/index.html" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav5'].src=MSFPnav5h.src" onmouseout="if(MSFPhover) document['MSFPnav5'].src=MSFPnav5n.src"><img src="../photos/_derived/index.html_cmp_artsy110_vbtn.gif" width="140" height="60" border="0" alt="Photo Album" name="MSFPnav5"></a><br><script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav6n=MSFPpreload("../free_software/_derived/index.html_cmp_artsy110_vbtn.gif"); MSFPnav6h=MSFPpreload("../free_software/_derived/index.html_cmp_artsy110_vbtn_a.gif"); }
+// --></script><a href="../free_software/index.html" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav6'].src=MSFPnav6h.src" onmouseout="if(MSFPhover) document['MSFPnav6'].src=MSFPnav6n.src"><img src="../free_software/_derived/index.html_cmp_artsy110_vbtn.gif" width="140" height="60" border="0" alt="Free Software" name="MSFPnav6"></a><br><img src="_derived/index.html_cmp_artsy110_vbtn_p.gif" width="140" height="60" border="0" alt="Lyrics and Poems"></p>
+
+<!--mstheme--></font></td><td valign="top" width="24"></td><!--msnavigation--><td valign="top"><!--mstheme--><font face="Arial, Helvetica">
+
+<p>If you are here, you are truly jobless! Silted here are lyrics of mostly rock
+songs (mushy = yucky!) and mebbe poems (in the far future!) and other things I
+find interesting.</p>
+<div id="blist" style="font-size: 10pt">
+</div>
+<!--msthemeseparator--><p align="center"><img src="../_themes/artsy/arthsepa.gif" width="600" height="10"></p>
+<h3><!--mstheme--><font color="#669933"><a name="Iron Maiden - Mother Russia">Iron Maiden - Mother Russia</a><!--mstheme--></font></h3>
+<p>Mother Russia how are you sleeping<br>
+Middle winter cold winds blow<br>
+From the trees the snowflakes drifting<br>
+Swirling round like ghosts in the snow<br>
+Mother Russia poetry majestic<br>
+Tells the time of a great empire<br>
+Turning round the old man ponders<br>
+Reminiscing an age gone by<br>
+<br>
+Mother Russia<br>
+Dance of the Tsars<br>
+Hold up your heads<br>
+Be proud of what you are<br>
+Now it has come<br>
+Freedom at last<br>
+Turning the tides of history<br>
+And your past<br>
+<br>
+Mother Russia<br>
+Dance of the Tsars<br>
+Hold up your heads<br>
+Remember who you are<br>
+Can you release<br>
+The anger the grief<br>
+Can you be happy<br>
+Now your people are free</p>
+<p>[<a href="index.html">Top</a>]</p>
+<!--msthemeseparator--><p align="center"><img src="../_themes/artsy/arthsepa.gif" width="600" height="10"></p>
+<h3><!--mstheme--><font color="#669933"><a name="Iron Maiden - The Educated Fool">Iron Maiden - The Educated Fool</a><!--mstheme--></font></h3>
+<p>I'm an educated fool<br>
+So I don't know what it is I'm supposed to do<br>
+About this awkward situation<br>
+That's been forced down right upon me</p>
+<p>As I'm walking down into on my own<br>
+into the valley of life<br>
+Got a lifetime of experience<br>
+yeah I've got so much to give</p>
+<p>Open the page at chapter one<br>
+could this just be that life's just begun<br>
+Forever within your darker thoughts<br>
+Reflecting on everything you've been taught</p>
+<p>Never felt this way before<br>
+Seems that somebody's just opened the door<br>
+To the book of life... or is it death!<br>
+there's ever anyway out</p>
+<p>Someone's looking down on me<br>
+to the very inner core of my soul<br>
+They won't tell me what they see<br>
+But I really want to know</p>
+<p>I want to leave my life on my own<br>
+I want to lift the unturned stone<br>
+I want to walk right into the fire<br>
+I want to live out all my desires</p>
+<p>I want to go and see the fire burn<br>
+I want to see and feel my world turn<br>
+I want to know what more there's to learn<br>
+I want to pass the point of no return</p>
+<p>Do you really wanna be<br>
+Just another one statistic or feel</p>
+<p>That you really should aspire<br>
+That you really do deserve more</p>
+<p>Do you ever really feel<br>
+That you have so much potential inside<br>
+What you really have to give<br>
+Could be realized so much more</p>
+<p>Time will flow<br>
+And I will follow<br>
+Time will go<br>
+But I will follow</p>
+<p>I want to feel what life's like respond<br>
+I want to meet my father beyond<br>
+I want to walk right into the light<br>
+I want to feel no fear but delight</p>
+<p>I want to leave my life on my own<br>
+I want to lift the unturned stone<br>
+I want to walk right into the fire<br>
+I want to live out all my desires</p>
+<p>The educated fool</p>
+<p>[<a href="index.html">Top</a>]</p>
+<!--msthemeseparator--><p align="center"><img src="../_themes/artsy/arthsepa.gif" width="600" height="10"></p>
+<h3><!--mstheme--><font color="#669933"><a name="Iron Maiden - Flight of Icarus">Iron Maiden - Flight of Icarus</a><!--mstheme--></font></h3>
+<p>As the sun breaks above the ground<br>
+An old man stands on the hill<br>
+As the ground warms to the first rays of light<br>
+A birdsong shatters the still<br>
+<br>
+His eyes are ablaze<br>
+See the madman in his gaze<br>
+<br>
+Fly on your way like an eagle<br>
+Fly as high as the sun<br>
+On your wings like an eagle<br>
+Fly and touch the sun<br>
+<br>
+Now the crowd breaks and a young boy appears<br>
+Look the old man in his eyes<br>
+As he spreads his wings and shouts at the crowd<br>
+In the name of God my father I fly<br>
+<br>
+His eyes seem so glazed<br>
+As he flies on the wings of a dream<br>
+Now he knows his father betrayed<br>
+Now his wings burn to ashes to ashes his grave<br>
+<br>
+Fly on your way like an eagle<br>
+Fly as high as the sun<br>
+On your wings like an eagle<br>
+Fly and touch the sun<br>
+</p>
+<p>[<a href="index.html">Top</a>]</p>
+<!--msthemeseparator--><p align="center"><img src="../_themes/artsy/arthsepa.gif" width="600" height="10"></p>
+<h3><!--mstheme--><font color="#669933"><a name="Iron Maiden - Caught somewhere in Time">Iron Maiden - Caught
+Somewhere in Time</a><!--mstheme--></font></h3>
+<p>If you had the time to lose,<br>
+An open mind and time to choose,<br>
+Would you care to take a look,<br>
+Or can you read me like a book?<br>
+<br>
+Time is always on my side,<br>
+Time is always on my side.<br>
+<br>
+Can I tempt you, come with me,<br>
+Be Devil may care, fulfill your dream,<br>
+If I said I'd take you there,<br>
+Would you go, would you be scared?<br>
+<br>
+Time is always on my side,<br>
+Time is always on my side.<br>
+<br>
+Don't be afraid, you're safe with me,<br>
+Safe as any soul can be ... honestly,<br>
+Just let yourself go.<br>
+<br>
+Chorus:<br>
+Caught somewhere in time<br>
+Caught somewhere in time<br>
+Caught somewhere in time ... oh oh<br>
+<br>
+Like a wolf in sheep's clothing,<br>
+You try to hide your deepest sins,<br>
+Of all the things that you've done wrong,<br>
+And I know where you belong.<br>
+<br>
+Time is always on my side,<br>
+Time is always on my side.<br>
+<br>
+Make you an offer you can't refuse,<br>
+You've only got your soul to lose...<br>
+Eternally... Just let yourself go!<br>
+<br>
+Chorus:<br>
+Caught somewhere in time<br>
+Caught somewhere in time<br>
+Caught now in two minds!</p>
+<p>[<a href="index.html">Top</a>]</p>
+<!--msthemeseparator--><p align="center"><img src="../_themes/artsy/arthsepa.gif" width="600" height="10"></p>
+<h3><!--mstheme--><font color="#669933"><a name="The Charge Of The Light Brigade - Alfred, Lord Tennyson">The Charge
+Of The Light Brigade - Alfred, Lord Tennyson</a><!--mstheme--></font></h3>
+<p>IM's The Trooper is based on this...</p>
+<p>Half a league, half a league,<br>
+Half a league onward,<br>
+All in the valley of Death<br>
+Rode the six hundred.<br>
+'Forward, the Light Brigade!<br>
+Charge for the guns!' he said:<br>
+Into the valley of Death<br>
+Rode the six hundred.</p>
+<p>'Forward, the Light Brigade!'<br>
+Was there a man dismay'd ?<br>
+Not tho' the soldier knew<br>
+Some one had blunder'd:<br>
+Their's not to make reply,<br>
+Their's not to reason why,<br>
+Their's but to do and die:<br>
+Into the valley of Death<br>
+Rode the six hundred.</p>
+<p>Cannon to right of them,<br>
+Cannon to left of them,<br>
+Cannon in front of them<br>
+Volley'd and thunder'd;<br>
+Storm'd at with shot and shell,<br>
+Boldly they rode and well,<br>
+Into the jaws of Death,<br>
+Into the mouth of Hell<br>
+Rode the six hundred.</p>
+<p>Flash'd all their sabres bare,<br>
+Flash'd as they turn'd in air<br>
+Sabring the gunners there,<br>
+Charging an army, while<br>
+All the world wonder'd:<br>
+Plunged in the battery-smoke<br>
+Right thro' the line they broke;<br>
+Cossack and Russian<br>
+Reel'd from the sabre-stroke<br>
+Shatter'd and sunder'd.<br>
+Then they rode back, but not<br>
+Not the six hundred.</p>
+<p>Cannon to right of them,<br>
+Cannon to left of them,<br>
+Cannon behind them<br>
+Volley'd and thunder'd;<br>
+Storm'd at with shot and shell,<br>
+While horse and hero fell,<br>
+They that had fought so well<br>
+Came thro' the jaws of Death,<br>
+Back from the mouth of Hell,<br>
+All that was left of them,<br>
+Left of six hundred.</p>
+<p>When can their glory fade?<br>
+O the wild charge they made!<br>
+All the world wonder'd.<br>
+Honour the charge they made!<br>
+Honour the Light Brigade,<br>
+Noble six hundred!</p>
+<p>[<a href="index.html">Top</a>]</p>
+<!--msthemeseparator--><p align="center"><img src="../_themes/artsy/arthsepa.gif" width="600" height="10"></p>
+<h3><!--mstheme--><font color="#669933"><a name="Iron Maiden - The Trooper">Iron Maiden - The Trooper</a><!--mstheme--></font></h3>
+<p>You'll take my life but I'll take yours too<br>
+You'll fire you musket but I'll run you through<br>
+So when your waiting for the next attack<br>
+You'd better stand there's no turning back<br>
+<br>
+The Bugle sounds as the charge begins<br>
+But on this battlefield no one wins<br>
+The smell of acrid smoke and horses breath<br>
+As you plunge into a certain death<br>
+<br>
+The horse he sweats with fear we break to run<br>
+The mighty roar of the Russian guns<br>
+And as we race towards the human wall<br>
+The screams of pain as my comrades fall<br>
+<br>
+We hurdle bodies that lay on the ground<br>
+And the Russians fire another round<br>
+We get so near yet so far away<br>
+We won't live to fight another day<br>
+<br>
+We get so close near enough to fight<br>
+When a Russian gets me in his sights<br>
+He pulls the trigger and I feel the blow<br>
+A burst of rounds take my horse below<br>
+<br>
+And as I lay there gazing at the sky<br>
+My body's numb and my throat is dry<br>
+And as I lay forgotten and alone<br>
+Without a tear I draw my parting groan</p>
+<p>[<a href="index.html">Top</a>]</p>
+<!--msthemeseparator--><p align="center"><img src="../_themes/artsy/arthsepa.gif" width="600" height="10"></p>
+<h3><!--mstheme--><font color="#669933"><a name="To His Coy Mistress - Andrew Marvell">To His Coy Mistress - Andrew
+Marvell</a><!--mstheme--></font></h3>
+<p>The main reason this exists on my page is coz IM based one of their songs on
+this (Charlotte the Harlot??)</p>
+<p>HAD we but world enough, and time,<br>
+This coyness, Lady, were no crime<br>
+We would sit down and think which way<br>
+To walk and pass our long love's day.<br>
+Thou by the Indian Ganges' side<br>
+Shouldst rubies find: I by the tide<br>
+Of Humber would complain. I would<br>
+Love you ten years before the Flood,<br>
+And you should, if you please, refuse<br>
+Till the conversion of the Jews.<br>
+My vegetable love should grow<br>
+Vaster than empires, and more slow;<br>
+An hundred years should go to praise<br>
+Thine eyes and on thy forehead gaze;<br>
+Two hundred to adore each breast,<br>
+But thirty thousand to the rest;<br>
+An age at least to every part,<br>
+And the last age should show your heart.<br>
+For, Lady, you deserve this state,<br>
+Nor would I love at lower rate.<br>
+But at my back I always hear<br>
+Time's wingèd chariot hurrying near;<br>
+And yonder all before us lie<br>
+Deserts of vast eternity.<br>
+Thy beauty shall no more be found,<br>
+Nor, in thy marble vault, shall sound<br>
+My echoing song: then worms shall try<br>
+That long preserved virginity,<br>
+And your quaint honour turn to dust,<br>
+And into ashes all my lust:<br>
+The grave 's a fine and private place,<br>
+But none, I think, do there embrace.<br>
+Now therefore, while the youthful hue<br>
+Sits on thy skin like morning dew,<br>
+And while thy willing soul transpires<br>
+At every pore with instant fires,<br>
+Now let us sport us while we may,<br>
+And now, like amorous birds of prey,<br>
+Rather at once our time devour<br>
+Than languish in his slow-chapt power.<br>
+Let us roll all our strength and all<br>
+Our sweetness up into one ball,<br>
+And tear our pleasures with rough strife<br>
+Thorough the iron gates of life:<br>
+Thus, though we cannot make our sun<br>
+Stand still, yet we will make him run.</p>
+<p>[<a href="index.html">Top</a>]</p>
+<!--msthemeseparator--><p align="center"><img src="../_themes/artsy/arthsepa.gif" width="600" height="10"></p>
+<h3><!--mstheme--><font color="#669933"><a name="Stevie Ray Vaughan - Little wing">Stevie Ray Vaughan - Little Wing</a><!--mstheme--></font></h3>
+<p>Now she's walking through the clouds<br>
+With a circus mind<br>
+That's running wild<br>
+Butterflies and zebras<br>
+And moonbeams and fairytales<br>
+All she ever thinks about is riding with the wind...<br>
+<br>
+When I'm sad she comes to me<br>
+With a thousand smiles<br>
+She gives to me, free<br>
+It's alright, it's alright' she says<br>
+Take anything you want from me<br>
+Anything<br>
+<br>
+Now she's walking through the clouds<br>
+With a circus mind<br>
+That's running wild<br>
+Butterflies and zebras<br>
+And moonbeams and fairytales<br>
+All she ever thinks about is riding with the wind...<br>
+<br>
+When I'm sad she comes to me<br>
+With a thousand smiles<br>
+She gives to me free<br>
+It's alright, it's alright' she says<br>
+Take anything you want from me<br>
+Anything<br>
+<br>
+Fly Little Wing... Yeah, Yeah...
+<p>[<a href="index.html">Top</a>]</p>
+<!--msthemeseparator--><p align="center"><img src="../_themes/artsy/arthsepa.gif" width="600" height="10"></p>
+<h3><!--mstheme--><font color="#669933"><a name="Metallica - Nothing Else Matters">Metallica - Nothing Else Matters</a><!--mstheme--></font></h3>
+<p>So close no matter how far<br>
+Couldn't be much more form the heart<br>
+Forever trusting who we are<br>
+And nothing else matters</p>
+<p>Never opened myself this way<br>
+Life is ours, we live it our way<br>
+All these words I don't just say<br>
+And nothing else matters</p>
+<p>Trust I seek and I find in you<br>
+Every day for us something new<br>
+Open mind for a different view<br>
+And nothing else matters</p>
+<p>Never cared for what they do<br>
+Never cared for what they know<br>
+But I know</p>
+<p>So close no matter how far<br>
+Couldn't be much more form the heart<br>
+Forever trusting who we are<br>
+And nothing else matters</p>
+<p>Never cared for what they do<br>
+Never cared for what they know<br>
+But I know</p>
+<p>Never opened myself this way<br>
+Life is ours, we live it our way<br>
+All these words I don't just say</p>
+<p>Trust I seek and I find in you<br>
+Every day for us something new<br>
+Open mind for a different view<br>
+And nothing else matters</p>
+<p>Never cared for what they say<br>
+Never cared for games they play<br>
+Never cared for what they do<br>
+Never cared for what they know</p>
+<p>So close no matter how far<br>
+Couldn't be much more form the heart<br>
+Forever trusting who we are<br>
+And nothing else matters</p>
+<p>[<a href="index.html">Top</a>]</p>
+<!--msthemeseparator--><p align="center"><img src="../_themes/artsy/arthsepa.gif" width="600" height="10"></p>
+<h3><!--mstheme--><font color="#669933"><a name="Metallica - The Memory Remains">Metallica - The Memory Remains</a><!--mstheme--></font></h3>
+<p>(To my lost pal Kanchana, miss ya)</p>
+<p>Mirror vain<br>
+Gone insane<br>
+But the memory remains<br>
+Heavy rings on fingers wave<br>
+Another star denies the grave<br>
+See the nowhere crowd, cry the nowhere tears of honor<br>
+Like twisted vines that grow<br>
+That hide and swallow mansions whole<br>
+And dim the light of an already faded prima donna</p>
+<p>Fortune, fame<br>
+Mirror vain<br>
+Gone insane...<br>
+Fortune, fame<br>
+Mirror vain<br>
+Gone insane...<br>
+But the memory remains<br>
+Heavy rings hold cigarettes<br>
+Up to lips that time forgets<br>
+While the Hollywood sun sets behind your back<br>
+And can't the band play on?<br>
+Just listen, they play my song<br>
+Ash to ash<br>
+Dust to dust<br>
+Fade to black</p>
+<p>Fortune, fame<br>
+Mirror vain<br>
+Gone insane...<br>
+Fortune, fame<br>
+Mirror vain<br>
+Gone insane...<br>
+Dance little tin goddess<br>
+na-na-na<br>
+Drift away<br>
+Fade away<br>
+Little tin goddess<br>
+Ash to ash<br>
+Dust to dust<br>
+Fade to black</p>
+<p>Fortune, fame<br>
+Mirror vain<br>
+Gone insane...<br>
+Fortune, fame<br>
+Mirror vain<br>
+Gone insane...<br>
+But the memory remains<br>
+Ash to ash Dust to dust Fade to black...<br>
+But the memory remains Yeah<br>
+Faded prima donna yeah, yeah (solo)<br>
+Dance little tin goddess dance</p>
+<p>[<a href="index.html">Top</a>]</p>
+<!--msthemeseparator--><p align="center"><img src="../_themes/artsy/arthsepa.gif" width="600" height="10"></p>
+<h3><!--mstheme--><font color="#669933"><a name="Iron Maiden - Judas Be My Guide">Iron Maiden - Judas Be My Guide</a><!--mstheme--></font></h3>
+<p>Lights out - We live in a world of darkness<br>
+No doubt - Everything's up for sale<br>
+We sleep - All of the world is burning<br>
+We pray - To god for a better deal<br>
+Nothing is sacred - Back then or now<br>
+Everything's wasted...<br>
+Is that all there is?<br>
+Can I go now?</p>
+<p>Judas my guide<br>
+Whispers in the night<br>
+Judas my guide</p>
+<p>Fight wars - Die in a blaze of glory<br>
+Come home - Meat in a plastic sack<br>
+Fall down - Better pray to your God for mercy<br>
+So kneel - and help the blade cut clean<br>
+Nothing is sacred - Back then or now<br>
+Everyone's wasted...<br>
+Is that all there is?<br>
+Is that it now?</p>
+<p>I live in the black<br>
+I have no guiding light<br>
+I'm whispering in your dreams...</p>
+<p>Judas my guide<br>
+Whispers in the night<br>
+Judas my guide</p>
+<p>Judas my guide<br>
+Whispers in the night<br>
+Judas my guide</p>
+<p>[<a href="index.html">Top</a>]</p>
+<!--msthemeseparator--><p align="center"><img src="../_themes/artsy/arthsepa.gif" width="600" height="10"></p>
+<h3><!--mstheme--><font color="#669933"><br>
+
+<script>
+listanchors(this.document, 'blist');
+</script>
+
+<!--mstheme--></font></h3>
+
+<!--mstheme--></font><!--msnavigation--></td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td><!--mstheme--><font face="Arial, Helvetica">
+
+<p>&nbsp;</p>
+<!--mstheme--></font><table border="0" width="100%">
+    <tr>
+        <td width="50%"><!--mstheme--><font face="Arial, Helvetica"><!--mstheme--></font></td>
+        <td width="50%"><!--mstheme--><font face="Arial, Helvetica">
+            <p align="right"><font size="2">&nbsp;Last Modified on 02/21/2003</font><!--mstheme--></font></td>
+    </tr>
+</table><!--mstheme--><font face="Arial, Helvetica">
+
+<!--mstheme--></font></td></tr><!--msnavigation--></table></body>
+
+</html>
+</script>
+

@@ -1,0 +1,1697 @@
+<html>
+
+<head>
+<meta name=Generator content="Microsoft Office HTML Filter 2.0">
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Originator content="Microsoft Word 9">
+<title>Colored Range Searching</title>
+<style>
+<!--
+ 
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Garamond;}
+h1
+	{
+	margin-top:.25in;
+	margin-right:0in;
+	margin-bottom:4.0pt;
+	margin-left:0in;
+	text-align:center;
+	text-indent:0in;
+	page-break-after:avoid;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Garamond;
+	font-variant:small-caps;
+	font-weight:normal;}
+h2
+	{
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.1in;
+	text-align:justify;
+	text-indent:0in;
+	page-break-after:avoid;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Garamond;
+	font-weight:normal;
+	font-style:italic;}
+h3
+	{
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.2in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:0in;
+	page-break-after:avoid;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Garamond;
+	font-weight:normal;
+	font-style:italic;}
+h4
+	{
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.8in;
+	text-align:justify;
+	text-indent:-.5in;
+	page-break-after:avoid;
+	text-autospace:none;
+	font-size:9.0pt;
+	font-family:Garamond;
+	font-weight:normal;
+	font-style:italic;}
+h5
+	{
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:1.3in;
+	text-align:justify;
+	text-indent:-.5in;
+	text-autospace:none;
+	font-size:9.0pt;
+	font-family:Garamond;
+	font-weight:normal;}
+h6
+	{
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:1.8in;
+	text-align:justify;
+	text-indent:-.5in;
+	text-autospace:none;
+	font-size:8.0pt;
+	font-family:Garamond;
+	font-weight:normal;
+	font-style:italic;}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:2.3in;
+	text-align:justify;
+	text-indent:-.5in;
+	text-autospace:none;
+	font-size:8.0pt;
+	font-family:Garamond;}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:2.8in;
+	text-align:justify;
+	text-indent:-.5in;
+	text-autospace:none;
+	font-size:8.0pt;
+	font-family:Garamond;
+	font-style:italic;}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:3.3in;
+	text-align:justify;
+	text-indent:-.5in;
+	text-autospace:none;
+	font-size:8.0pt;
+	font-family:Garamond;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Garamond;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:10.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Garamond;}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:20.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Garamond;}
+p.MsoToc4, li.MsoToc4, div.MsoToc4
+	{
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:30.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Garamond;}
+p.MsoToc5, li.MsoToc5, div.MsoToc5
+	{
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:40.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Garamond;}
+p.MsoToc6, li.MsoToc6, div.MsoToc6
+	{
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:50.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Garamond;}
+p.MsoToc7, li.MsoToc7, div.MsoToc7
+	{
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:60.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Garamond;}
+p.MsoToc8, li.MsoToc8, div.MsoToc8
+	{
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:70.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Garamond;}
+p.MsoToc9, li.MsoToc9, div.MsoToc9
+	{
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:80.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Garamond;}
+p.MsoFootnoteText, li.MsoFootnoteText, div.MsoFootnoteText
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:10.1pt;
+	text-autospace:none;
+	font-size:8.0pt;
+	font-family:Garamond;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Garamond;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Garamond;}
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+	{
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	text-align:justify;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Garamond;
+	font-weight:bold;}
+p.MsoTof, li.MsoTof, div.MsoTof
+	{
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:20.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:-20.0pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Garamond;}
+span.MsoFootnoteReference
+	{vertical-align:super;}
+p.MsoList2, li.MsoList2, div.MsoList2
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:-.25in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Garamond;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	text-autospace:none;
+	font-size:24.0pt;
+	font-family:Garamond;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	text-align:justify;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Garamond;}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:31.5pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:-31.5pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Garamond;}
+p.MsoListContinue, li.MsoListContinue, div.MsoListContinue
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:.25in;
+	text-align:justify;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Garamond;}
+p.MsoBodyTextIndent2, li.MsoBodyTextIndent2, div.MsoBodyTextIndent2
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:-27.0pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:"Courier New";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+p.Abstract, li.Abstract, div.Abstract
+	{
+	margin-top:1.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:10.1pt;
+	text-autospace:none;
+	font-size:9.0pt;
+	font-family:Garamond;
+	font-weight:bold;}
+p.Authors, li.Authors, div.Authors
+	{
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:16.0pt;
+	margin-left:0in;
+	text-align:center;
+	text-autospace:none;
+	font-size:11.0pt;
+	font-family:Garamond;}
+span.MemberType
+	{
+	font-style:italic;}
+p.References, li.References, div.References
+	{
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.25in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:-.25in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Garamond;}
+p.IndexTerms, li.IndexTerms, div.IndexTerms
+	{
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:10.1pt;
+	text-autospace:none;
+	font-size:9.0pt;
+	font-family:Garamond;
+	font-weight:bold;}
+p.Text, li.Text, div.Text
+	{
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:10.1pt;
+	line-height:105%;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Garamond;}
+p.FigureCaption, li.FigureCaption, div.FigureCaption
+	{
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-autospace:none;
+	font-size:8.0pt;
+	font-family:Garamond;}
+p.TableTitle, li.TableTitle, div.TableTitle
+	{
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	text-autospace:none;
+	font-size:8.0pt;
+	font-family:Garamond;
+	font-variant:small-caps;}
+p.ReferenceHead, li.ReferenceHead, div.ReferenceHead
+	{
+	margin-top:.25in;
+	margin-right:0in;
+	margin-bottom:4.0pt;
+	margin-left:0in;
+	text-align:center;
+	page-break-after:avoid;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Garamond;
+	font-variant:small-caps;}
+p.Equation, li.Equation, div.Equation
+	{
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	line-height:105%;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Garamond;}
+p.Achievement, li.Achievement, div.Achievement
+	{
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.3in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:-.25in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Garamond;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='text-justify-trim:
+punctuation'>
+
+<div class=Section1>
+
+<p class=Text><span style='font-size:12.0pt;'>&nbsp;</span></p>
+
+<div>
+
+<table cellspacing=0 cellpadding=0 hspace=0 vspace=0 width=636 align=center>
+ <tr>
+  <td valign=top align=left style='padding-top:9.35pt;padding-right:9.35pt;
+  padding-bottom:9.35pt;padding-left:9.35pt'>
+  <p class=MsoTitle><a name="_Ref8047242"></a><span style='font-size:36.0pt;'>Survey of Algorithms and Techniques for Colored
+  Range Searching</span></p>
+  </td>
+ </tr>
+</table>
+
+</div><br clear=ALL>
+
+<div>
+
+<table cellspacing=0 cellpadding=0 hspace=0 vspace=0 width=617 align=center>
+ <tr>
+  <td valign=top align=left style='padding-top:9.35pt;padding-right:9.35pt;
+  padding-bottom:9.35pt;padding-left:9.35pt'>
+  <p class=Authors><span style='font-size:16.0pt;'>Ashwin
+  Kashyap<br>
+  <a href="mailto:ashwink@paul.rutgers.edu">ashwink@paul.rutgers.edu</a><br>
+  Project Website: <a href="http://www.cs.rutgers.edu/~ashwink/db_project">http://www.cs.rutgers.edu/~ashwink/db_project</a></span></p>
+  <p class=Authors><span style='font-size:16.0pt;'>Submitted
+  in partial fulfillment for the course CS541 Databases Systems</span></p>
+  <p class=Authors><span style='font-size:16.0pt;'>Course
+  Advisor: Prof. S. Muthukrishnan<br>
+  <a href="mailto:muthu@cs.rutgers.edu">muthu@cs.rutgers.edu</a></span></p>
+  </td>
+ </tr>
+</table>
+
+</div><br clear=ALL>
+
+<p class=Abstract><i><span style='font-size:12.0pt;'>Abstract</span></i><span
+style='font-size:12.0pt;'>ùColored range searching is a
+fundamental problem that arises in many applications like spatial databases,
+network routing, document retrieval, and sub-string indexing. In the general
+case, a set <i>S</i>, of colored geometric points are to be preprocessed so
+that given a query object <i>q</i>, the distinct colors of the objects
+intersected by <i>q</i> can be reported efficiently or the number of such
+colors can be counted efficiently. While optimal algorithms exist to solve
+these problems in general, there are not many databases that implement these
+algorithms. This is a survey of such algorithms and techniques. We also explore
+how we can implement some of these algorithms in a real-world database system;
+we then evaluate and analyze the performance of these techniques. The database
+used is PostgreSQL, which has good geometric primitives, including data types,
+operators and indexes.</span></p>
+
+<i><span style='font-size:14.0pt;font-family:Garamond;'><br
+clear=all style='page-break-before:always'>
+</span></i>
+
+<p class=MsoNormal style='margin-left:10.1pt;text-indent:10.1pt'><span
+style='font-size:14.0pt;text-transform:uppercase'>Table
+Of Contents</span></p>
+
+<p class=MsoToc1><span
+class=MsoHyperlink><span style='font-size:14.0pt;'><a
+href="#_Toc8624797">I.<span style='font-size:18.0pt;
+font-family:"Times New Roman";color:windowtext;text-decoration:none;'>áá </span>Introduction<span
+style='color:windowtext;display:none;text-decoration:none;'>. </span><span
+style='color:windowtext;display:none;text-decoration:none;'>3</span></a></span></span></p>
+
+<p class=MsoToc1><span
+class=MsoHyperlink><span style='font-size:14.0pt;'><a
+href="#_Toc8624798">II.<span style='font-size:18.0pt;
+font-family:"Times New Roman";color:windowtext;text-decoration:none;'>ááá </span>Motivation and
+Applications<span style='color:windowtext;display:none;
+text-decoration:none;'>. </span><span
+style='color:windowtext;display:none;text-decoration:none;'>3</span></a></span></span></p>
+
+<p class=MsoToc1><span
+class=MsoHyperlink><span style='font-size:14.0pt;'><a
+href="#_Toc8624799">III.<span style='font-size:18.0pt;
+font-family:"Times New Roman";color:windowtext;text-decoration:none;'>áá </span>Problem Definitions<span
+style='color:windowtext;display:none;text-decoration:none;'>. </span><span
+style='color:windowtext;display:none;text-decoration:none;'>4</span></a></span></span></p>
+
+<p class=MsoToc2><span
+class=MsoHyperlink><span style='font-size:14.0pt;'><a
+href="#_Toc8624800">A.<span style='font-size:18.0pt;
+font-family:"Times New Roman";color:windowtext;text-decoration:none;'>ááá </span>1D color range searching<span
+style='color:windowtext;display:none;text-decoration:none;'>. </span><span
+style='color:windowtext;display:none;text-decoration:none;'>4</span></a></span></span></p>
+
+<p class=MsoToc2><span
+class=MsoHyperlink><span style='font-size:14.0pt;'><a
+href="#_Toc8624801">B.<span style='font-size:18.0pt;
+font-family:"Times New Roman";color:windowtext;text-decoration:none;'>ááá </span>2D color range searching<span
+style='color:windowtext;display:none;text-decoration:none;'>. </span><span
+style='color:windowtext;display:none;text-decoration:none;'>4</span></a></span></span></p>
+
+<p class=MsoToc2><span
+class=MsoHyperlink><span style='font-size:14.0pt;'><a
+href="#_Toc8624802">C.<span style='font-size:18.0pt;
+font-family:"Times New Roman";color:windowtext;text-decoration:none;'>ááá </span>Colored Point enclosure<span
+style='color:windowtext;display:none;text-decoration:none;'>. </span><span
+style='color:windowtext;display:none;text-decoration:none;'>4</span></a></span></span></p>
+
+<p class=MsoToc2><span
+class=MsoHyperlink><span style='font-size:14.0pt;'><a
+href="#_Toc8624803">D.<span style='font-size:18.0pt;
+font-family:"Times New Roman";color:windowtext;text-decoration:none;'>ááá </span>Common Colors Query<span
+style='color:windowtext;display:none;text-decoration:none;'>. </span><span
+style='color:windowtext;display:none;text-decoration:none;'>4</span></a></span></span></p>
+
+<p class=MsoToc2><span
+class=MsoHyperlink><span style='font-size:14.0pt;'><a
+href="#_Toc8624804">E.<span style='font-size:18.0pt;
+font-family:"Times New Roman";color:windowtext;text-decoration:none;'>ááá </span>GROUP BY queries<span
+style='color:windowtext;display:none;text-decoration:none;'>. </span><span
+style='color:windowtext;display:none;text-decoration:none;'>4</span></a></span></span></p>
+
+<p class=MsoToc1><span
+class=MsoHyperlink><span style='font-size:14.0pt;'><a
+href="#_Toc8624805">IV.<span style='font-size:18.0pt;
+font-family:"Times New Roman";color:windowtext;text-decoration:none;'>áá </span>Algorithmic Solutions<span
+style='color:windowtext;display:none;text-decoration:none;'>. </span><span
+style='color:windowtext;display:none;text-decoration:none;'>4</span></a></span></span></p>
+
+<p class=MsoToc2><span
+class=MsoHyperlink><span style='font-size:14.0pt;'><a
+href="#_Toc8624806">A.<span style='font-size:18.0pt;
+font-family:"Times New Roman";color:windowtext;text-decoration:none;'>ááá </span>Fractional cascading<span
+style='color:windowtext;display:none;text-decoration:none;'>. </span><span
+style='color:windowtext;display:none;text-decoration:none;'>5</span></a></span></span></p>
+
+<p class=MsoToc2><span
+class=MsoHyperlink><span style='font-size:14.0pt;'><a
+href="#_Toc8624807">B.<span style='font-size:18.0pt;
+font-family:"Times New Roman";color:windowtext;text-decoration:none;'>ááá </span>Generalized 1D Range
+Searching<span style='color:windowtext;display:none;text-decoration:
+none;'>. </span><span
+style='color:windowtext;display:none;text-decoration:none;'>5</span></a></span></span></p>
+
+<p class=MsoToc2><span
+class=MsoHyperlink><span style='font-size:14.0pt;'><a
+href="#_Toc8624808">C.<span style='font-size:18.0pt;
+font-family:"Times New Roman";color:windowtext;text-decoration:none;'>ááá </span>Colored Range Searching
+in 1D<span style='color:windowtext;display:none;text-decoration:
+none;'>... </span><span
+style='color:windowtext;display:none;text-decoration:none;'>6</span></a></span></span></p>
+
+<p class=MsoToc2><span
+class=MsoHyperlink><span style='font-size:14.0pt;'><a
+href="#_Toc8624809">D.<span style='font-size:18.0pt;
+font-family:"Times New Roman";color:windowtext;text-decoration:none;'>ááá </span>Solutions in 2D<span
+style='color:windowtext;display:none;text-decoration:none;'>... </span><span
+style='color:windowtext;display:none;text-decoration:none;'>7</span></a></span></span></p>
+
+<p class=MsoToc1><span
+class=MsoHyperlink><span style='font-size:14.0pt;'><a
+href="#_Toc8624810">V.<span style='font-size:18.0pt;
+font-family:"Times New Roman";color:windowtext;text-decoration:none;'>ááá </span>Experimental Study<span
+style='color:windowtext;display:none;text-decoration:none;'>. </span><span
+style='color:windowtext;display:none;text-decoration:none;'>7</span></a></span></span></p>
+
+<p class=MsoToc1><span
+class=MsoHyperlink><span style='font-size:14.0pt;'><a
+href="#_Toc8624811">VI.<span style='font-size:18.0pt;
+font-family:"Times New Roman";color:windowtext;text-decoration:none;'>áá </span>Conclusion<span
+style='color:windowtext;display:none;text-decoration:none;'>. </span><span
+style='color:windowtext;display:none;text-decoration:none;'>9</span></a></span></span></p>
+
+<p class=MsoToc1><span
+class=MsoHyperlink><span style='font-size:14.0pt;'><a
+href="#_Toc8624812">References<span style='color:windowtext;display:none;text-decoration:none;'>. </span><span
+style='color:windowtext;display:none;text-decoration:none;'>9</span></a></span></span></p>
+
+<p class=MsoNormal><span
+style='font-size:14.0pt;'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:10.1pt;text-indent:10.1pt'><span
+style='font-size:14.0pt;text-transform:uppercase'>List
+Of Figures</span></p>
+
+<p class=MsoTof><span
+class=MsoHyperlink><span style='font-size:14.0pt;'><a
+href="#_Toc8624813">Figure 1: Document Retrieval problem<span style='color:
+windowtext;display:none;text-decoration:none;'>... </span><span
+style='color:windowtext;display:none;text-decoration:none;'>3</span></a></span></span></p>
+
+<p class=MsoTof><span
+class=MsoHyperlink><span style='font-size:14.0pt;'><a
+href="#_Toc8624814">Figure 2: Illustration of the 1D Range searching Algorithm<span
+style='color:windowtext;display:none;text-decoration:none;'>... </span><span
+style='color:windowtext;display:none;text-decoration:none;'>5</span></a></span></span></p>
+
+<p class=MsoTof><span
+class=MsoHyperlink><span style='font-size:14.0pt;'><a
+href="#_Toc8624815">Figure 3: Performance comparison of query execution times<span
+style='color:windowtext;display:none;text-decoration:none;'>. </span><span
+style='color:windowtext;display:none;text-decoration:none;'>7</span></a></span></span></p>
+
+<p class=MsoTof><span
+class=MsoHyperlink><span style='font-size:14.0pt;'><a
+href="#_Toc8624816">Figure 4: Impact of data range on query execution time<span
+style='color:windowtext;display:none;text-decoration:none;'>. </span><span
+style='color:windowtext;display:none;text-decoration:none;'>7</span></a></span></span></p>
+
+<p class=MsoTof><span
+class=MsoHyperlink><span style='font-size:14.0pt;'><a
+href="#_Toc8624817">Figure 5: Scalability of the algorithm as the number of
+colors increase<span style='color:windowtext;display:none;
+text-decoration:none;'>. </span><span
+style='color:windowtext;display:none;text-decoration:none;'>8</span></a></span></span></p>
+
+<p class=MsoTof><span
+class=MsoHyperlink><span style='font-size:14.0pt;'><a
+href="#_Toc8624818">Figure 6: Scalability of the algorithm as the number of
+tuples increase<span style='color:windowtext;display:none;
+text-decoration:none;'>. </span><span
+style='color:windowtext;display:none;text-decoration:none;'>8</span></a></span></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;text-transform:uppercase'>&nbsp;</span></p>
+
+<span style='font-size:14.0pt;font-family:Garamond;
+text-transform:uppercase;'><br clear=all
+style='page-break-before:always'>
+</span>
+
+<h1 style='margin-left:0in;text-indent:0in'><a name="_Ref8110606"><span
+style='font-size:14.0pt;font-variant:normal;
+text-transform:uppercase'>I.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:14.0pt;
+font-variant:normal;text-transform:uppercase'>á</span></a><a name="_Toc8624797"><span
+style='font-size:14.0pt;font-variant:normal;
+text-transform:uppercase'>I</span></a><span
+style='font-size:14.0pt;font-variant:normal;
+text-transform:uppercase'>ntroduction</span></h1>
+
+<p class=MsoNormal><span style='font-size:14.0pt;'>One
+of the prevalent problems in a lot of database applications is to report
+distinct categories of a given set of objects that meet some criteria,
+formally, this is known as the Colored Range Searching (CRS) problem. This is
+also known as the Intersection Searching problem and there are variations on
+this; either count the objects or report them, these are classified as the
+Counting problem and the Reporting problem.</span></p>
+
+<p class=MsoNormal style='text-indent:10.1pt'><span style='font-size:14.0pt;'>CRS is a specific instance of the range-searching
+problem, which is thoroughly investigated in the database community and there
+exist efficient algorithms and data structures that are readily implemented in
+every commercial database system. CRS can be solved using the same general
+techniques as range searching, then iterating over the results we can either
+report or count the objects (this translates to the GROUP BY or the COUNT
+feature in SQL). While this is a straightforward solution, it is clearly
+inefficient and much work has been done in developing efficient data structures
+and algorithms. </span></p>
+
+<h1 style='margin-left:0in;text-indent:0in'><a name="_Toc8624798"><span
+style='font-size:14.0pt;font-variant:normal;
+text-transform:uppercase'>II.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:14.0pt;
+font-variant:normal;text-transform:uppercase'>Motivation and Applications</span></a></h1>
+
+<p class=MsoNormal><span style='font-size:14.0pt;'>There
+are several well-known algorithms and data structures on colored range
+searching and most of the research so far has been of theoretical interest, and
+no definitive results are know on the performance of these techniques in a real
+world database system. Most database systems are highly tuned for real world
+load and query scenarios and take into consideration various factors of I/O
+like block transfers and random transfers for implementing any given algorithm.
+</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;'>In
+almost all of the algorithms for CRS, augmented data structures are used to
+store additional information contained in the sub-tree at a given node, while
+this ensures that the number of tree traversals needed to find the required
+data is reduced, no results are known when parts of the data have to be retrieved
+from the disk. Clearly, these algorithms do not make distinctions between
+various types of disk accesses and assume a uniform cost model for data
+retrieval.á It would be interesting to
+compare performances after implementing some of these algorithms.</span></p>
+
+<p class=Text style='text-indent:0in'><span style='font-size:14.0pt;'>Some of the applications, which we expect to see a significant
+improvement in performance are:</span></p>
+
+<table border=0 cellspacing=0 cellpadding=0 align=right style='border-collapse:
+ collapse;'>
+ <tr style='height:261.15pt'>
+  <td width=385 valign=top style='width:289.05pt;padding:0in 5.4pt 0in 5.4pt;
+  height:261.15pt'>
+  <p class=MsoCaption><img width=372 height=310
+  src="./Report_files/image001.gif" align=left><a
+  name="_Ref8550552"></a><a name="_Toc8624813"><span
+  style='font-size:14.0pt;'>Figure 1</span></a><span style='font-size:14.0pt;'>:</span><span
+  style='font-size:14.0pt;font-weight:normal'>
+  Document Retrieval problem</span></p>
+  <p class=MsoNormal style='page-break-after:avoid;'>&nbsp;</p>
+  </td>
+ </tr>
+</table>
+
+<p class=Achievement><span style='font-size:14.0pt;font-family:Verdana'>©<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:14.0pt;'>Consider
+a database that logs all IP packets traversing a router over time. IP packets
+have a structure; out of the total 32 bits, some higher order bits correspond
+to the network and are termed the network address. The rest of the lower order
+bits are termed as the host address. Queries are of the form ôgive me all
+network addresses of all packets that traversed the router in a certain time
+intervalö. Clearly, there are two ranges here, the time interval and the range
+of IP addresses having the same common prefix. The result of the query falls
+within the cross product of the two ranges. This is an example of a two
+dimensional color range searching. This is a particularly challenging
+application, and as high-speed networking becomes more common, the logs will
+grow bigger and it is very important for the database system to minimize the
+time taken to process the query.</span></p>
+
+<p class=Achievement><span style='font-size:14.0pt;font-family:Verdana'>©<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:14.0pt;'>Given
+a set D of text documents <i>d<sub>1</sub></i>,&nbsp;<i>d<sub>2</sub></i>,&nbsp;à&nbsp;<i>d<sub>k</sub></i>
+and a string pattern <i>p</i>, our goal is to efficiently list all documents
+that contain the string. The overall approach is to perform ôlocal encodingö
+which consists of chaining each document suffix to another nearby document
+based on some pair wise criteria. From this, range queries are generated, which
+have objects drawn from different documents, which may be thought of as
+different colors. This is the document-listing problem, it occurs very frequently
+in web searches, and [13] solves this problem optimally. Figure 1 Illustrates the problem; here each node represents a
+node in the suffix tree, which is built on the given library of documents. The
+leaves represent the <i>n</i> suffixes in the library.</span></p>
+
+<p class=Achievement><span style='font-size:14.0pt;font-family:Verdana'>©<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:14.0pt;'>Matching
+sub-strings has become increasingly important, especially since XML databases
+are gaining popularity. It is well known that B-Trees are I/O optimal in one
+dimension, but no index structure with non-trivial query bounds is known for
+two-dimensional sub-string indexing. [9] Presents an algorithm to solve this efficiently. They
+largely rely on transformations of the problem to a version of Common Color
+Query (CCQ) in two-dimensions, this is a more general version of CRQ, in that
+there is more than one range and all of them are disjoint.</span></p>
+
+<p class=Achievement><span style='font-size:14.0pt;font-family:Verdana'>©<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:14.0pt;'>Consider
+a database of mutual funds. Each fund has an annual total return and a factor
+that represents the fundÆs volatility. Clearly, each fund can be represented as
+a colored point in a plane. Generally, funds are classified into fund families
+they belong to. One might be interested in all funds having a certain range of
+volatility and another range of annual return. It is more efficient for an
+investor to consider the family of funds that meet the criteria instead of
+considering all the individual funds. This is an instance of the
+two-dimensional range-searching problem.</span></p>
+
+<p class=Achievement><span style='font-size:14.0pt;font-family:Verdana'>©<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:14.0pt;'>Consider
+the above example, but if we are just interested in a range for the annual
+total return, the problem reduces to a colored range search in one-dimension.</span></p>
+
+<h1 style='margin-left:0in;text-indent:0in'><a name="_Toc8624799"><span
+style='font-size:14.0pt;font-variant:normal;
+text-transform:uppercase'>III.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:14.0pt;
+font-variant:normal;text-transform:uppercase'>Problem Definitions</span></a></h1>
+
+<p class=MsoNormal><span style='font-size:14.0pt;'>These
+are the formal definitions of the various problems we discuss in this survey.
+These problems are addressed by various researchers under different names
+(intersection searching, range searching etc.), however, the underlying problem
+is essentially the same. Here we refer the color to denote the category of the
+object.</span></p>
+
+<h2 style='text-indent:0in'><a name="_Toc8624800"><span
+style='font-size:14.0pt;'>A.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:14.0pt;'>1D
+color range searching</span></a></h2>
+
+<p class=MsoBodyText><span style='font-size:14.0pt;'>Given
+a set <i>S</i>, of <i>n</i> colored points on the <i>x</i>-axis, we need to
+preprocess the points such that for any query interval <i>q</i>&nbsp;=&nbsp;[<i>x<sub>1</sub></i>,&nbsp;<i>x<sub>2</sub></i>]
+we need to either report the distinct colors that meet the criteria or count
+them.</span></p>
+
+<h2 style='text-indent:0in'><a name="_Toc8624801"><span
+style='font-size:14.0pt;'>B.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:14.0pt;'>2D
+color range searching</span></a></h2>
+
+<p class=MsoBodyText><span style='font-size:14.0pt;'>Given
+a set <i>S</i>, of <i>n</i> colored points in the plane, we need to preprocess
+the points such that for any query interval <i>q</i>&nbsp;=&nbsp;[<i>x<sub>1</sub></i>,&nbsp;<i>x<sub>2</sub></i>]&nbsp;</span><span
+style='font-size:14.0pt;font-family:Symbol;'>³</span><span style='font-size:14.0pt;'>&nbsp;[<i>y<sub>1</sub></i>,&nbsp;<i>y<sub>2</sub></i>]
+we need to either report the distinct colors that meet the criteria or count
+them.</span></p>
+
+<h2 style='text-indent:0in'><a name="_Toc8624802"><span
+style='font-size:14.0pt;'>C.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:14.0pt;'>Colored
+Point enclosure</span></a></h2>
+
+<p class=MsoNormal><span style='font-size:14.0pt;'>We
+are given <i>P</i>, a set of <i>n</i> colored points, we have to preprocess
+this so a query of the following form can be answered efficiently: Given a
+query point <i>q</i> = [<i>q<sub>1</sub></i>, <i>q<sub>2</sub></i>], the
+problem is to output the set of distinct colors on rectangles that contain <i>q</i>.
+</span></p>
+
+<h2 style='text-indent:0in'><a name="_Toc8624803"><span
+style='font-size:14.0pt;'>D.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:14.0pt;'>Common
+Colors Query</span></a></h2>
+
+<p class=MsoNormal><span style='font-size:14.0pt;'>We
+are given an array <i>A</i>[1à<i>N</i>] of colors drawn from 1,à, <i>C</i>. We
+want to preprocess this array so that the following query can be answered
+efficiently: Given two non-overlapping intervals <i>I<sub>1</sub></i> and <i>I<sub>2</sub></i> in [1, <i>N</i>}, list the distinct
+colors that occur in both intervals <i>I<sub>1</sub></i> and <i>I<sub>2.</sub></i></span></p>
+
+<h2 style='text-indent:0in'><a name="_Toc8624804"><span
+style='font-size:14.0pt;'>E.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:14.0pt;'>GROUP
+BY queries</span></a></h2>
+
+<p class=MsoBodyText><span style='font-size:14.0pt;'>The
+GROUP BY clause in an SQL query will gather all tuples together that contain
+data in the specified column(s) and will allow aggregate functions to be
+performed on the one or more columns. </span></p>
+
+<p class=MsoBodyText><span style='font-size:14.0pt;'>For
+example:</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-27.0pt'><span
+style='font-size:14.0pt;font-family:"Courier New"'>SELECT
+max(salary), dept FROM employee GROUP BY dept;</span></p>
+
+<p class=MsoBodyText><span style='font-size:14.0pt;'>This
+statement will select the maximum salary for the people in each unique
+department. Basically, the salary for the person who makes the most in each
+department will be displayed. Their salary and their department will be
+returned. We can use this technique to remove duplicates, however, this can be
+inefficient when the result set is large.</span></p>
+
+<h1 style='margin-left:0in;text-indent:0in'><a name="_Toc8624805"><span
+style='font-size:14.0pt;font-variant:normal;
+text-transform:uppercase'>IV.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:14.0pt;
+font-variant:normal;text-transform:uppercase'>Algorithmic Solutions</span></a></h1>
+
+<p class=MsoNormal><span style='font-size:14.0pt;'>Most
+solutions deal separately with problems of different dimensions; here we
+consider, in deep, only the one&#8209;dimensional case of the problem and give
+a brief overview how these can be extended in two dimensions. Solutions of
+higher dimensions are not discussed.</span></p>
+
+<h2 style='text-indent:0in'><a name="_Toc8624806"><span
+style='font-size:14.0pt;'>A.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:14.0pt;'>Fractional
+cascading</span></a></h2>
+
+<p class=MsoBodyText><span style='font-size:14.0pt;'>This
+[3] is a type of data structure that is used to speed up
+search problems and range queries. Suppose we have to search the same key in
+several sorted lists, each of size <i>m</i>. The obvious approach is to perform
+a binary search in each list&nbsp;û&nbsp;requires <i>O</i>(log&nbsp;<i>n</i>)
+operations for each list. Fractional cascading is a method of cross-linking
+those lists in such a way that the <i>O</i>(log&nbsp;<i>n</i>) cost of binary
+search has to be paid only once: to locate the key in one of the lists. The
+cross-links then allow the key to be located in each additional list with only
+a constant number of operations.á </span></p>
+
+<h2 style='text-indent:0in'><a name="_Toc8624807"><span
+style='font-size:14.0pt;'>B.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:14.0pt;'>Generalized
+1D Range Searching</span></a></h2>
+
+<p class=MsoNormal><span style='font-size:14.0pt;'>[11] Describes a simpler method to transform the 1D
+colored Range searching problem to an instance of a set of points in a plane,
+such that any query will return only those points that are unique in color. </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;'>Given
+a set <i>S</i>, of <i>n</i> colored points on the <i>x</i>-axis and a query
+interval <i>q</i>&nbsp;=&nbsp;[<i>x<sub>1</sub></i>,&nbsp;<i>x<sub>2</sub></i>],
+we sort the distinct points of that color by non-decreasing <i>x</i>&nbsp;coordinate.
+For each point <i>p</i> of color&nbsp;<i>c</i>, let <i>pred</i>(<i>p</i>) be
+its predecessor in the sorted order; for the leftmost point of color <i>c</i>,
+we take the predecessor to be the point -</span><span style='font-size:14.0pt;font-family:Symbol;'>Ñ</span><span
+style='font-size:14.0pt;'>. We then map <i>p</i> to
+the point <i>p</i></span><span style='font-size:14.0pt;
+font-family:Symbol;'>ó</span><span style='font-size:
+14.0pt;'>&nbsp;=&nbsp;(<i>p</i>,&nbsp;<i>pred</i>(<i>p</i>))
+in the plane and associate with it the color <i>c</i>. Let <i>S</i></span><span
+style='font-size:14.0pt;font-family:Symbol;'>ó</span><span style='font-size:14.0pt;'> be the resulting set of points. Given a query
+interval <i>q</i>&nbsp;=&nbsp;[<i>x<sub>1</sub></i>,&nbsp;<i>x<sub>2</sub></i>],
+we map it to the grounded rectangle <i>q</i></span><span style='font-size:14.0pt;font-family:Symbol;'>ó</span><span
+style='font-size:14.0pt;'>&nbsp;=&nbsp;[<i>x<sub>1</sub></i>,&nbsp;<i>x<sub>2</sub></i>]&nbsp;</span><span
+style='font-size:14.0pt;font-family:Symbol;'>³</span><span style='font-size:14.0pt;'>&nbsp;[-</span><span style='font-size:14.0pt;font-family:Symbol;'>Ñ</span><span
+style='font-size:14.0pt;'>,&nbsp;<i>x<sub>1</sub></i>].</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;'>LEMMA</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;'>There
+is a point of color <i>c</i> in <i>q</i> = [<i>x<sub>1</sub></i>, <i>x<sub>2</sub></i>]
+if and only if there is a point of color <i>c</i> in [<i>x<sub>1</sub></i>, <i>x<sub>2</sub></i>]
+if and only if there is a point if color <i>c</i> in <i>q</i></span><span
+style='font-size:14.0pt;font-family:Symbol;'>ó</span><span style='font-size:14.0pt;'>&nbsp;=&nbsp;[<i>x<sub>1</sub></i>,&nbsp;<i>x<sub>2</sub></i>]&nbsp;</span><span
+style='font-size:14.0pt;font-family:Symbol;'>³</span><span style='font-size:14.0pt;'>&nbsp;[-</span><span style='font-size:14.0pt;font-family:Symbol;'>Ñ</span><span
+style='font-size:14.0pt;'>,&nbsp;<i>x<sub>1</sub></i>].
+Moreover, if there is a point of color <i>c</i> in <i>q</i></span><span
+style='font-size:14.0pt;font-family:Symbol;'>ó</span><span style='font-size:14.0pt;'>, then this point is unique.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;'>PROOF</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;'>(</span><span
+style='font-size:14.0pt;font-family:Wingdings;'>‡</span><span style='font-size:14.0pt;'>) Let <i>p</i></span><span style='font-size:14.0pt;font-family:Symbol;'>ó</span><span
+style='font-size:14.0pt;'> be a <i>c</i>-colored point
+in <i>q</i></span><span style='font-size:14.0pt;
+font-family:Symbol;'>ó</span><span style='font-size:
+14.0pt;'>, where <i>p</i></span><span
+style='font-size:14.0pt;font-family:Symbol;'>ó</span><span style='font-size:14.0pt;'>&nbsp;=&nbsp;(<i>p</i>,&nbsp;<i>pred</i>(<i>p</i>))
+for some <i>c</i>-colored point <i>p</i>&nbsp;</span><span style='font-size:
+14.0pt;font-family:Symbol;'>ð</span><span
+style='font-size:14.0pt;'>&nbsp;<i>S</i>. Since <i>p</i></span><span
+style='font-size:14.0pt;font-family:Symbol;'>ó</span><span style='font-size:14.0pt;'> is in [<i>x<sub>1</sub></i>,&nbsp;<i>x<sub>2</sub></i>]&nbsp;</span><span
+style='font-size:14.0pt;font-family:Symbol;'>³</span><span style='font-size:14.0pt;'>&nbsp;[&#8209;</span><span style='font-size:14.0pt;font-family:Symbol;'>Ñ</span><span
+style='font-size:14.0pt;'>,&nbsp;<i>x<sub>1</sub></i>],
+it is clear that <i>x<sub>1</sub></i>&nbsp;</span><span style='font-size:14.0pt;font-family:Symbol;'>ú</span><span
+style='font-size:14.0pt;'>&nbsp;<i>p</i>&nbsp;</span><span
+style='font-size:14.0pt;font-family:Symbol;'>ú</span><span style='font-size:14.0pt;'>&nbsp;<i>x<sub>2</sub></i> and thus <i>p</i>&nbsp;</span><span
+style='font-size:14.0pt;font-family:Symbol;'>ð</span><span style='font-size:14.0pt;'>&nbsp;[<i>x<sub>1</sub></i>,&nbsp;<i>x<sub>2</sub></i>].</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;'>(</span><span
+style='font-size:14.0pt;font-family:Wingdings;'>ˆ</span><span style='font-size:14.0pt;'>) let <i>p</i> be the leftmost point of color <i>c</i>
+in [<i>x<sub>1</sub></i>,&nbsp;<i>x<sub>2</sub></i>]. Thus <i>x<sub>1</sub></i>&nbsp;</span><span
+style='font-size:14.0pt;font-family:Symbol;'>ú</span><span style='font-size:14.0pt;'>&nbsp;<i>p</i>&nbsp;</span><span style='font-size:
+14.0pt;font-family:Symbol;'>ú</span><span
+style='font-size:14.0pt;'>&nbsp;<i>x<sub>2</sub></i>
+and since <i>pred</i>(<i>p</i>)&nbsp;</span><span style='font-size:14.0pt;font-family:Symbol;'>Î</span><span
+style='font-size:14.0pt;'>&nbsp;[<i>x<sub>1</sub></i>,&nbsp;<i>x<sub>2</sub></i>],
+we have <i>x<sub>1</sub></i>&nbsp;&gt;&nbsp;<i>pred</i>(<i>p</i>). It follows
+that <i>p</i></span><span style='font-size:14.0pt;
+font-family:Symbol;'>ó</span><span style='font-size:
+14.0pt;'>&nbsp;=&nbsp;(<i>p</i>,&nbsp;<i>pred</i>(i))
+is in [<i>x<sub>1</sub></i>,&nbsp;<i>x<sub>2</sub></i>]&nbsp;</span><span
+style='font-size:14.0pt;font-family:Symbol;'>³</span><span style='font-size:14.0pt;'>&nbsp;[-</span><span style='font-size:14.0pt;font-family:Symbol;'>Ñ</span><span
+style='font-size:14.0pt;'>,&nbsp;<i>x<sub>1</sub></i>].
+We prove that <i>p</i></span><span style='font-size:14.0pt;font-family:Symbol;'>ó</span><span
+style='font-size:14.0pt;'> is the only point of color <i>c</i>
+in <i>q</i></span><span style='font-size:14.0pt;
+font-family:Symbol;'>ó</span><span style='font-size:
+14.0pt;'>. Suppose for a contradiction that <i>t</i></span><span
+style='font-size:14.0pt;font-family:Symbol;'>ó</span><span style='font-size:14.0pt;'>&nbsp;=&nbsp;(<i>t</i>,&nbsp;<i>pred</i>(<i>t</i>))
+is another point of color <i>c</i> in <i>q</i></span><span style='font-size:
+14.0pt;font-family:Symbol;'>ó</span><span
+style='font-size:14.0pt;'>. Thus we have <i>x<sub>1</sub></i>&nbsp;</span><span
+style='font-size:14.0pt;font-family:Symbol;'>ú</span><span style='font-size:14.0pt;'>&nbsp;<i>t</i>&nbsp;</span><span style='font-size:
+14.0pt;font-family:Symbol;'>ú</span><span
+style='font-size:14.0pt;'>&nbsp;<i>x<sub>2</sub></i>.
+Since <i>t</i>&nbsp;&gt;&nbsp;<i>p</i>, we also have <i>pred</i>(<i>t</i>)&nbsp;</span><span
+style='font-size:14.0pt;font-family:Symbol;'>þ</span><span style='font-size:14.0pt;'>&nbsp;<i>p</i>&nbsp;</span><span style='font-size:
+14.0pt;font-family:Symbol;'>þ</span><span
+style='font-size:14.0pt;'>&nbsp;<i>x<sub>1</sub></i>.
+Thus <i>t</i></span><span style='font-size:14.0pt;
+font-family:Symbol;'>ó</span><span style='font-size:
+14.0pt;'> cannot lie in <i>q</i></span><span
+style='font-size:14.0pt;font-family:Symbol;'>ó</span><span style='font-size:14.0pt;'> û a contradiction. The claim follows.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:10.1pt'><span style='font-size:14.0pt;'>The Lemma implies that we can solve the 1D color range
+searching problem by simply reporting the points in <i>q</i></span><span
+style='font-size:14.0pt;font-family:Symbol;'>ó</span><span style='font-size:14.0pt;'>, without regard to colors. In other words, we have
+reduced the 1D color range searching problem to the standard grounded
+range-reporting problem in two dimensions.</span></p>
+
+<p class=MsoNormal style='text-indent:10.1pt'><span style='font-size:14.0pt;'>Data structure used to represent consist of the
+following: For each color <i>c</i>, we maintain a balanced binary search tree, <i>T<sub>c</sub></i>,
+in which the <i>c</i>-colored points of <i>S</i> are stored in non-decreasing <i>x
+</i>order. We maintain the colors in a balanced search tree <i>CT</i>, and
+store with each color <i>c</i> in <i>CT</i> a pointer <i>T<sub>c</sub></i>. We
+also store the points in <i>S</i></span><span style='font-size:14.0pt;font-family:Symbol;'>ó</span><span
+style='font-size:14.0pt;'> in a balanced priority
+search tree (PST). To answer query <i>q</i> = [<i>l</i>, <i>r</i>], we simply
+query the PST with <i>q</i></span><span style='font-size:14.0pt;font-family:Symbol;'>ó</span><span
+style='font-size:14.0pt;'> = [<i>l</i>, <i>r</i>] </span><span
+style='font-size:14.0pt;font-family:Symbol;'>³</span><span style='font-size:14.0pt;'> [&#8209;</span><span style='font-size:14.0pt;font-family:Symbol;'>Ñ</span><span
+style='font-size:14.0pt;'>, <i>l</i>] and report the
+colors of the points found. The query time is <i>O</i>(log <i>n</i> + <i>k</i>),
+where <i>k</i> is the number of points inside <i>q</i></span><span
+style='font-size:14.0pt;font-family:Symbol;'>ó</span><span style='font-size:14.0pt;'>.</span></p>
+
+<table border=1 cellspacing=0 cellpadding=0 align=left style='border-collapse:
+ collapse;border:none;'>
+ <tr style='height:202.5pt'>
+  <td width=319 valign=top style='width:239.4pt;border:none;padding:0in 5.4pt 0in 5.4pt;
+  height:202.5pt'>
+  <p class=MsoCaption><img width=299 height=236
+  src="./Report_files/image002.gif" align=left><a
+  name="_Ref8544605"></a><a name="_Ref8544612"></a><a name="_Toc8624814"></a><span style='
+  position:absolute;z-index:63;left:0px;margin-left:-6px;margin-top:207px;
+  width:47px;height:43px'>
+  <table cellpadding=0 cellspacing=0>
+   <tr>
+    <td width=47 height=43 align=left valign=top style='vertical-align:top'><span
+    style='position:absolute;left:0pt;z-index:2'>
+    <table cellpadding=0 cellspacing=0 width="100%">
+     <tr>
+      <td>
+      <div style='padding:3.6pt 7.2pt 3.6pt 7.2pt'
+      class=shape>
+      <p class=MsoNormal>-<span style='font-family:Symbol;'>Ñ</span></p>
+      </div></td>
+     </tr>
+    </table>
+    </span>&nbsp;</td>
+   </tr>
+  </table>
+  </span><span
+  style='font-size:14.0pt;'>Figure 2</span><span
+  style='font-size:14.0pt;'>: </span><span
+  style='font-size:14.0pt;font-weight:normal'>Illustration
+  of the 1D Range searching Algorithm</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='text-indent:.1in'><span style='font-size:14.0pt;'>As Figure
+2 illustrates, the <i>y</i>-coordinate of a point is
+the same as the <i>x</i>&#8209;coordinate of the predecessor point. Recall that
+the predecessor point of a point <i>p</i> will be a point with the same color
+and will precede the point <i>p</i> when sorted in non&#8209;decreasing order.
+When a query [<i>l</i>,&nbsp;<i>r</i>]&nbsp;</span><span style='font-size:14.0pt;font-family:Symbol;'>³</span><span
+style='font-size:14.0pt;'>&nbsp;[&#8209;</span><span
+style='font-size:14.0pt;font-family:Symbol;'>Ñ</span><span style='font-size:14.0pt;'>,&nbsp;<i>l</i>] is asked, it is easy to see why
+there will not be any duplicate points of the same color within the grounded
+query rectangle û the upper bound in the <i>y&#8209;</i>axis is the same as the
+lower bound in the <i>x</i>&#8209;axis, so if a point <i>p</i> is included then
+its successor will not be included. Note that the lower bound of the range is
+inclusive, while the upper bound is exclusive of the bound values.</span></p>
+
+<p class=MsoNormal style='text-indent:.1in'><span style='font-size:14.0pt;'>This transformation is straightforward to implement
+in a database system û the points can be sorted and stored in B&#8209;Tree
+instead of a binary search tree. Most database systems do not include any form
+of PST and in order to efficiently range-query the set of points in a plane, we
+need to index two columns (or 2D points). R&#8209;Tree indexes are available in
+many popular commercial database systems and they are capable of indexing this
+kind of data. Even if R-Tree indexes are unavailable, most database systems can
+optimize query execution by examining the selectivity of the two ranges (in the
+<i>x</i> and the <i>y</i> axes respectively).á
+Consider the query [<i>l</i>,&nbsp;<i>r</i>]&nbsp;</span><span
+style='font-size:14.0pt;font-family:Symbol;'>³</span><span style='font-size:14.0pt;'>&nbsp;[&#8209;</span><span style='font-size:14.0pt;font-family:Symbol;'>Ñ</span><span
+style='font-size:14.0pt;'>,&nbsp;<i>l</i>], it is
+interesting to note the inverse relationship in selectivity between the two
+ranges. PostgreSQL supports many types of indexes including R-Trees and we
+evaluate the performance with R-Tree indexes.</span></p>
+
+<h2 style='text-indent:0in'><a name="_Toc8624808"><span
+style='font-size:14.0pt;'>C.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:14.0pt;'>Colored
+Range Searching in 1D</span></a></h2>
+
+<p class=MsoNormal><span style='font-size:14.0pt;'>[8] Describes another method to pre-process the set, this
+however assumes that the points are in [0,&nbsp;<i>U</i>] and they are
+integers. Let <i>P</i> be a set of <i>n</i> colored points in [0,&nbsp;<i>U</i>]
+and let <i>C</i> denote the set of distinct colors in the point set <i>P</i>.
+First, consider the semi-infinite query <i>q</i>&nbsp;=&nbsp;[<i>x<sub>1</sub></i>,&nbsp;</span><span
+style='font-size:14.0pt;font-family:Symbol;'>Ñ</span><span style='font-size:14.0pt;'>]. For each color <i>c</i>&nbsp;</span><span
+style='font-size:14.0pt;font-family:Symbol;'>ð</span><span style='font-size:14.0pt;'>&nbsp;<i>C</i>, we pick the point <i>p<sub>c</sub></i>&nbsp;</span><span
+style='font-size:14.0pt;font-family:Symbol;'>ð</span><span style='font-size:14.0pt;'>&nbsp;<i>P</i> with color <i>c</i> having the
+maximum value. Let <i>P<sup>max</sup></i> denote the set of all such points,
+and let <i>L</i> be a link-list of these points sorted in non-decreasing order.
+To answer the query <i>q</i>, we simply walk the list <i>L</i> and output all
+colors with <i>x</i>&nbsp;</span><span style='font-size:14.0pt;font-family:Symbol;'>þ</span><span
+style='font-size:14.0pt;'>&nbsp;<i>x<sub>1</sub></i>.
+The query [&#8209;</span><span style='font-size:14.0pt;
+font-family:Symbol;'>Ñ</span><span style='font-size:
+14.0pt;'>,&nbsp;<i>x<sub>2</sub></i>] can be answered
+similarly. To answer a query <i>q</i>&nbsp;=&nbsp;[<i>x<sub>1</sub></i>,&nbsp;<i>x<sub>2</sub></i>],
+we build a trie <i>T</i>[1] on the values of <i>p</i>&nbsp;</span><span
+style='font-size:14.0pt;font-family:Symbol;'>ð</span><span style='font-size:14.0pt;'>&nbsp;<i>P</i>. For each node <i>v</i>&nbsp;</span><span
+style='font-size:14.0pt;font-family:Symbol;'>ð</span><span style='font-size:14.0pt;'>&nbsp;<i>T</i>, let <i>P<sub>v</sub></i> denote the
+set of points contained in the sub-tree of <i>T</i> rooted at <i>v</i>. At each
+internal node <i>v</i>, we store a secondary structure, which consists of two
+semi-infinite query data structures <i>L<sub>v</sub></i> and <i>R<sub>v</sub></i>
+corresponding to the queries [<i>q</i>,&nbsp;</span><i><span style='font-size:
+14.0pt;font-family:Symbol;'>Ñ</span></i><span
+style='font-size:14.0pt;'>] and [&#8209;</span><i><span
+style='font-size:14.0pt;font-family:Symbol;'>Ñ</span></i><span style='font-size:14.0pt;'>,&nbsp;<i>q</i>]. <i>L<sub>v</sub></i> and <i>R<sub>v</sub></i>
+are sorted linked lists containing either <i>P<sup>max</sup></i> or <i>P<sup>min</sup></i>
+as explained earlier. For every non-root node <i>v</i>&nbsp;</span><span
+style='font-size:14.0pt;font-family:Symbol;'>ð</span><span style='font-size:14.0pt;'>&nbsp;<i>T</i>, let <i>B</i>(<i>v</i>)&nbsp;=&nbsp;0
+if <i>v</i> is a left child of its parent and <i>B</i>(<i>v</i>)&nbsp;=&nbsp;1
+otherwise. To search the trie <i>T</i>, we assign an index <i>I<sub>v</sub></i>
+for each non-root node <i>v</i>&nbsp;</span><span style='font-size:14.0pt;font-family:Symbol;'>ð</span><span
+style='font-size:14.0pt;'>&nbsp;<i>T</i>. <i>I<sub>v</sub></i>
+is an integer whose bit representation corresponds to the concatenation of <i>B</i>(<i>w</i>)Æs,
+where <i>w</i> is in the path from root to <i>v</i> in <i>T</i>. The level of a
+node <i>v</i> is defined as the length of the path from the root to <i>v</i> in
+<i>T</i>. We then build a static hash table <i>H<sub>i</sub></i> on the indexes
+<i>I<sub>v</sub></i> in the hash table. The hash table <i>H<sub>i</sub></i>
+uses linear space and provides <i>O</i>(1) worst case lookup. The number of
+nodes in the trie <i>T</i> is <i>O</i>(<i>n</i>&nbsp;log&nbsp;<i>U</i>). Since
+each point <i>p</i>&nbsp;</span><span style='font-size:14.0pt;font-family:Symbol;'>ð</span><span
+style='font-size:14.0pt;'>&nbsp;<i>P</i> might be
+stored at most once at each level in the lists <i>R<sub>v</sub></i>, <i>L<sub>v</sub></i>,
+and the height of the trie <i>T</i> is <i>O</i>(log&nbsp;<i>U</i>), the total
+size of the secondary structure is <i>O</i>(<i>n</i>&nbsp;log&nbsp;<i>U</i>).
+Hence the size of the entire data structure is <i>O</i>(<i>n</i>&nbsp;log&nbsp;<i>U</i>).</span></p>
+
+<p class=MsoNormal style='text-indent:10.1pt'><span style='font-size:14.0pt;'>To construct the trie <i>T</i>, we sort the point
+set <i>P</i> to get the sorted list of <i>P<sub>root</sub></i>, and suppose we
+need to construct the <i>i</i><sup>th</sup> level node <i>z</i>. Let <i>v</i>
+and <i>w</i> be the children of <i>z</i> in <i>T</i>. We partition the sorted
+list of points in <i>P<sub>z</sub></i> into sorted list of points in <i>P<sub>v</sub></i>
+and <i>P<sub>w</sub></i> and the construct the lists <i>L<sub>v</sub></i> and <i>R<sub>v</sub></i>.
+We now construct the hash table <i>H<sub>i</sub></i> on indexes <i>I<sub>v</sub></i>
+for all nodes <i>v</i> in level <i>i</i>.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;'>If
+a query <i>q</i>&nbsp;=&nbsp;[<i>x<sub>1</sub></i>,&nbsp;<i>x<sub>2</sub></i>]
+is given, we find the leaf nodes <i>z<sub>1</sub></i> and <i>z<sub>2</sub></i>
+which store <i>x<sub>1</sub></i> and <i>x<sub>2</sub></i> and then compute the
+least common ancestor of <i>z<sub>1</sub></i> and <i>z<sub>2</sub></i> by
+finding the common prefix of the bit representation of <i>x<sub>1</sub></i> and
+<i>x<sub>2</sub></i>, let this be <i>k</i> having a length <i>l</i>.á We can find the node <i>v</i> by searching
+for <i>k</i> in the hash table <i>H<sub>l</sub></i>, let <i>e</i> and <i>f</i>
+be the child of <i>v</i>. All the points <i>p</i>&nbsp;</span><span
+style='font-size:14.0pt;font-family:Symbol;'>ð</span><span style='font-size:14.0pt;'>&nbsp;[<i>x<sub>1</sub></i>,&nbsp;<i>x<sub>2</sub></i>]
+are contained in <i>P<sub>e</sub></i> and <i>P<sub>f</sub></i>. To find the
+points, we take the union of the results from two semi-infinite queries [<i>x<sub>1</sub></i>,&nbsp;</span><span
+style='font-size:14.0pt;font-family:Symbol;'>Ñ</span><span style='font-size:14.0pt;'>]&nbsp;and&nbsp;[-</span><span style='font-size:
+14.0pt;font-family:Symbol;'>Ñ</span><span
+style='font-size:14.0pt;'>,&nbsp;<i>x<sub>2</sub></i>].
+Each color in the output list is reported at most twice.</span></p>
+
+<p class=MsoNormal style='text-indent:.1in'><span style='font-size:14.0pt;'>Clearly, this algorithm is more complex than [11] and tries are needed, which may not be present in
+many database systems, moreover the output is not free of duplicates and these
+must be eliminated. </span></p>
+
+<h2 style='text-indent:0in'><span style='font-size:14.0pt;'>D.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:14.0pt;'>Common
+Colors Query</span></h2>
+
+<p class=MsoNormal><span style='font-size:14.0pt;'>Another
+interesting problem is the Common Colors Query (CCQ). In this problem, we are
+given an array <i>A</i>[1à<i>N</i>] of colors drawn from 1,&nbsp;à,&nbsp;<i>C</i>.
+We want to preprocess this array so that the following query can be answered
+efficiently: Given two non-overlapping intervals <i>I<sub>1</sub></i> and <i>I<sub>2</sub></i> in [1,&nbsp;<i>N</i>], list the distinct
+colors that occur in both intervals <i>I<sub>1</sub></i> and <i>I<sub>2.</sub></i></span></p>
+
+<p class=MsoNormal><span
+style='font-size:14.0pt;'>[9]</span><span
+style='font-size:14.0pt;'> Solves this problems
+optimally, the algorithm is as follows: We construct a matrix <i>AA</i> in
+which <i>AA</i>[<i>i</i>,&nbsp;<i>j</i>]&nbsp;=&nbsp;<i>c</i> if and only if <i>A</i>[<i>i</i>]
+= <i>A</i>[<i>j</i>] = <i>c</i>. Thus, <i>AA</i> is a [1,&nbsp;<i>N</i>]&nbsp;</span><span
+style='font-size:14.0pt;font-family:Symbol;'>³</span><span style='font-size:14.0pt;'>&nbsp;[1,&nbsp;<i>N</i>] matrix. Any query to <i>AA</i>
+will be a rectangle, that is [<i>a</i>, <i>b</i>]&nbsp;</span><span
+style='font-size:14.0pt;font-family:Symbol;'>³</span><span style='font-size:14.0pt;'>&nbsp;[<i>c</i>,&nbsp;<i>d</i>] and it returns the
+distinct colors in the rectangle. A query for the CCQ problem on array <i>A</i>
+with input intervals <i>I<sub>1</sub></i> and <i>I<sub>2</sub></i> is the same
+as a query to matrix <i>AA</i> with input <i>I<sub>1</sub></i>&nbsp;</span><span
+style='font-size:14.0pt;font-family:Symbol;'>³</span><span style='font-size:14.0pt;'>&nbsp;<i>I<sub>2</sub></i>; this means we need to
+solve the rectangle query on the matrix <i>AA</i> efficiently. </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;'>áá Preprocessing is done by considering the <i>N</i>
+columns of matrix <i>AA</i> and constructing a <i>x&#8209;</i>adic grouping.
+That is, we consider <i>metacolumns</i> by concatenating columns <i>kx</i><sup>2</sup>&nbsp;+&nbsp;1,&nbsp;<i>kx</i><sup>2</sup>&nbsp;+&nbsp;2,&nbsp;à&nbsp;,&nbsp;<i>kx</i><sup>2</sup>&nbsp;+&nbsp;<i>x</i><sup>2</sup>,
+for integers <i>k</i> and <i>i</i>. Clearly, the maximum possible value of <i>I</i>
+is <i>O</i>(log<i><sub>x</sub></i>&nbsp;(<i>N</i>)). Next, we linearize the
+metacolumns row-wise. The total size of the matrix <i>AA</i> is at most <i>N</i><sup>2</sup>&nbsp;/&nbsp;<i>B</i>
+disk pages. The total size of all metacolumns is <i>O</i>(<i>N</i><sup>2</sup>&nbsp;/&nbsp;<i>B</i>&nbsp;log<i><sub>x</sub></i>&nbsp;(<i>N</i>))
+since each column is in at most <i>O</i>(log<i><sub>x</sub></i>&nbsp;(<i>N</i>))
+metacolumns; this is the size of all the <i>AAA<sub>k</sub></i><sub>,<i>i</i></sub>s
+combined.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;'>áá Query processing is done as follows: Given a
+query rectangle [<i>a</i>, <i>b</i>]&nbsp;</span><span style='font-size:14.0pt;font-family:Symbol;'>³</span><span
+style='font-size:14.0pt;'>&nbsp;[<i>c</i>, <i>d</i>]
+on the matrix <i>AA</i>, we decompose [<i>a</i>, <i>b</i>] into its maximal,
+disjoint <i>x</i>-adic components (<i>k</i><sub>1</sub>, <i>i</i><sub>1</sub>),
+(<i>k</i><sub>2, </sub></span><i><span style='font-size:16.0pt;'>i</span></i><sub><span style='font-size:16.0pt;'>2</span></sub><span
+style='font-size:16.0pt;'>), à, (<i>k<sub>l</sub></i>,
+<i>i<sub>l</sub></i>), that is [<i>a</i>, <i>b</i>] = [(<i>k<sub>l</sub>x<sup>i1</sup></i>&nbsp;+&nbsp;1)à
+(<i>k</i><sub>1</sub>&nbsp;+&nbsp;1)<i>x<sup>i</sup></i><sup>1</sup>(<i>k</i><sub>2</sub><i>x<sup>i</sup></i><sup>2</sup>&nbsp;+&nbsp;1)
+à(<i>k</i><sub>2</sub>&nbsp;+&nbsp;1)<i>x<sup>i</sup></i><sup>2+1</sup> à (<i>k<sub>l</sub>x<sup>il</sup></i>&nbsp;+&nbsp;1)
+à (<i>k<sub>l</sub></i>&nbsp;+&nbsp;1)<i>x<sup>il</sup></i>]. The maximal
+decomposition of the <i>x</i>-adic components can be replaced by one of larger <i>i</i>,
+which can be easily found greedily: by starting from <i>a</i> and walking right
+to the closest <i>x</i>-adic endpoint one after the other, always taking the
+largest possible power of <i>i</i>. We then solve the CCQ problem on [<i>a</i>,&nbsp;<i>b</i>]&nbsp;</span><span
+style='font-size:16.0pt;font-family:Symbol;'>³</span><span style='font-size:16.0pt;'>&nbsp;[<i>c</i>,&nbsp;<i>d</i>] by solving the CCQ
+problem on each of the <i>x</i>-adic components (<i>k<sub>j</sub></i>,&nbsp;<i>i<sub>j</sub></i>)
+above with interval [<i>c</i>,&nbsp;<i>d</i>] on the <i>y</i>-axis for the
+entire width. It is easy to observe that his is precisely the CRQ problem on
+the linearized array <i>AAA<sub>kj</sub></i><sub>, <i>ij</i></sub>.</span></p>
+
+<h2 style='text-indent:0in'><a name="_Toc8624809"><span
+style='font-size:14.0pt;'>E.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:14.0pt;'>Solutions
+in 2D</span></a></h2>
+
+<p class=MsoNormal><span style='font-size:14.0pt;'>Most
+of the 2D techniques surveyed use some form of a persistent data structure and
+is non trivial to implement in any database system without further changes to
+the system itself. Both [11] and [8] have transformations and further describes a method
+to efficiently solve the CRS problem in two dimensions. The transformation uses
+more complex data structures and we will not investigate this further.</span></p>
+
+<h1 style='margin-left:0in;text-indent:0in'><a name="_Toc8624810"><span
+style='font-size:14.0pt;font-variant:normal;
+text-transform:uppercase'>V.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:14.0pt;
+font-variant:normal;text-transform:uppercase'>Experimental Study</span></a></h1>
+
+<p class=MsoNormal><span style='font-size:14.0pt;'>We implement
+the 1D color range searching algorithm described in [11] using the PostgreSQL 7.1.3-2 database system. All the
+tests were run on a dual processor PIII running at 700MHz with 128Mb main
+memory. The operating system was RedHat Linux 7.2. All code used in the
+experiments is available at: <a
+href="http://www.cs.rutgers.edu/~ashwink/db_project">http://www.cs.rutgers.edu/~ashwink/db_project</a>.
+</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;'>Two
+relations were created, namely <i>gen</i> and <i>std</i> with the following
+schemas:</span></p>
+
+<p class=MsoBodyTextIndent2><span style='font-size:14.0pt;'>CREATE TABLE gen (color in, x bigint, t1 text, t2 text, t3 text, t4
+text, t5 text);</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-27.0pt'><span
+style='font-size:14.0pt;font-family:"Courier New"'>CREATE
+INDEX genidx ON gen USING BTREE (x);</span></p>
+
+<table border=1 cellspacing=0 cellpadding=0 width=600 style='width:6.25in;
+ margin-left:5.4pt;border-collapse:collapse;border:none;'>
+ <tr>
+  <td width=88 colspan=2 valign=top style='width:65.8pt;border:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt;'>Gen</span></p>
+  </td>
+  <td style='border:none;border-bottom:solid windowtext .5pt;
+  padding:0in 0in 0in 0in' width=512 colspan=6><p class='MsoNormal'>&nbsp;</td>
+ </tr>
+ <tr>
+  <td width=86 valign=top style='width:64.25pt;border:solid windowtext .5pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt;'>color
+  int</span></p>
+  </td>
+  <td width=86 colspan=2 valign=top style='width:64.3pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt;'>x
+  bigint</span></p>
+  </td>
+  <td width=86 valign=top style='width:64.3pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt;'>t1
+  text</span></p>
+  </td>
+  <td width=86 valign=top style='width:64.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt;'>t2
+  text</span></p>
+  </td>
+  <td width=86 valign=top style='width:64.3pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt;'>t3
+  text</span></p>
+  </td>
+  <td width=86 valign=top style='width:64.3pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt;'>t4
+  text</span></p>
+  </td>
+  <td width=86 valign=top style='width:64.3pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt;'>t5
+  text</span></p>
+  </td>
+ </tr>
+ <tr height=0>
+  <td width=86 style='border:none'></td>
+  <td width=2 style='border:none'></td>
+  <td width=84 style='border:none'></td>
+  <td width=86 style='border:none'></td>
+  <td width=86 style='border:none'></td>
+  <td width=86 style='border:none'></td>
+  <td width=86 style='border:none'></td>
+  <td width=86 style='border:none'></td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='font-size:14.0pt;'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-27.0pt'><span
+style='font-size:14.0pt;font-family:"Courier New"'>CREATE
+TABLE std (color in, coord point, t1 text, t2 text, t3 text, t4 text, t5 text);</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-27.0pt'><span
+style='font-size:14.0pt;font-family:"Courier New"'>CREATE
+INDEX stdidx ON std USING RTREE (box(coord, coord));</span></p>
+
+<table border=1 cellspacing=0 cellpadding=0 width=600 style='width:6.25in;
+ margin-left:5.4pt;border-collapse:collapse;border:none;'>
+ <tr>
+  <td width=88 colspan=2 valign=top style='width:65.8pt;border:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt;'>Std</span></p>
+  </td>
+  <td style='border:none;border-bottom:solid windowtext .5pt;
+  padding:0in 0in 0in 0in' width=512 colspan=6><p class='MsoNormal'>&nbsp;</td>
+ </tr>
+ <tr>
+  <td width=86 valign=top style='width:64.25pt;border:solid windowtext .5pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt;'>color
+  int</span></p>
+  </td>
+  <td width=86 colspan=2 valign=top style='width:64.3pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt;'>coord
+  point</span></p>
+  </td>
+  <td width=86 valign=top style='width:64.3pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt;'>t1
+  text</span></p>
+  </td>
+  <td width=86 valign=top style='width:64.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt;'>t2
+  text</span></p>
+  </td>
+  <td width=86 valign=top style='width:64.3pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt;'>t3
+  text</span></p>
+  </td>
+  <td width=86 valign=top style='width:64.3pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt;'>t4
+  text</span></p>
+  </td>
+  <td width=86 valign=top style='width:64.3pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt;'>t5
+  text</span></p>
+  </td>
+ </tr>
+ <tr height=0>
+  <td width=86 style='border:none'></td>
+  <td width=2 style='border:none'></td>
+  <td width=84 style='border:none'></td>
+  <td width=86 style='border:none'></td>
+  <td width=86 style='border:none'></td>
+  <td width=86 style='border:none'></td>
+  <td width=86 style='border:none'></td>
+  <td width=86 style='border:none'></td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='font-size:14.0pt;'>&nbsp;</span></p>
+
+<table border=0 cellspacing=0 cellpadding=0 align=left style='border-collapse:
+ collapse;'>
+ <tr>
+  <td width=313 valign=top style='width:234.45pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt;'>&nbsp;</span></p>
+  <p class=MsoNormal style='page-break-after:avoid;'><span style='font-size:
+  14.0pt;'><img border=0 width=297 height=231
+  src="./Report_files/image004.gif"></span></p>
+  <p class=MsoCaption><a name="_Ref8221406"></a><a name="_Ref8221411"></a><a
+  name="_Toc8624815"><span style='font-size:14.0pt;'>Figure 3</span></a><span
+  style='font-size:14.0pt;'>: </span><span
+  style='font-size:14.0pt;font-weight:normal'>Performance
+  comparison of query execution times</span></p>
+  </td>
+  <td width=313 valign=top style='width:234.45pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt;'><img border=0 width=300 height=246
+  src="./Report_files/image006.gif"></span></p>
+  <p class=MsoCaption><a name="_Ref8222186"></a><a name="_Toc8624816"><span style='font-size:14.0pt;'>Figure 4</span></a><span style='font-size:14.0pt;'>: </span><span
+  style='font-size:14.0pt;font-weight:normal'>Impact
+  of data range on query execution time</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='font-size:14.0pt;'>The
+<i>gen</i> relation stores the 1D points, which are not processed. The <i>std</i>
+relation stores the values as <i>point</i>s [10], as (<i>x</i>,&nbsp;<i>pred</i>(<i>x</i>)) for each <i>color</i>.
+The <i>point</i> data-type is a geometric-type present in PostgreSQL,
+basically, these are pairs of floating point numbers stored as one single
+attribute; however only special indexes like R-Trees can be built on this data
+type. In most database systems, entire tuples must be loaded into main memory;
+even if a subset of the attributes is not needed by the query. In order to
+simulate these real load scenarios, some extra attributes were added (<i>t1</i>
+to <i>t5</i>); the values of these fields are arbitrary strings of the same
+length. The relation was generated with random colors between 0 and 72, except
+in [figref here]; the distribution was uniform. 0 was treated as the ground (&#8209;</span><span
+style='font-size:14.0pt;font-family:Symbol;'>Ñ</span><span style='font-size:14.0pt;'>). Each query was run three times in succession and
+the final result were averaged; the deviation between runs was insignificant. </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;'>A
+B-tree index was built on attribute <i>x</i> in the relation <i>gen</i>, and an
+R-Tree index on the attribute <i>coord</i> in the relation <i>std</i>. </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;'>The
+SQL statements used to query the relations are as follows:</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-27.0pt'><span
+style='font-size:14.0pt;font-family:"Courier New"'>SELECT
+color FROM gen WHERE x&gt;=start_range AND x&lt;end_range GROUP BY color;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;'>This
+query is on the <i>gen</i> relation, and will find all <i>x</i> values between <i>start_range</i>
+and <i>end_range</i> and group the result by color, for each experiment, we
+vary the <i>start_range</i> and the <i>end_range</i> and this referred to as
+the query range.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-27.0pt'><span
+style='font-size:14.0pt;font-family:"Courier New"'>SELECT
+color FROM std WHERE coord @ box </span><span style='font-size:14.0pt;font-family:Symbol;'>ó</span><span style='font-size:
+14.0pt;font-family:"Courier New"'>((start_range,
+ground), (end_range, start_range))</span><span style='font-size:14.0pt;font-family:Symbol;'>ó</span><span style='font-size:
+14.0pt;font-family:"Courier New"'> GROUP BY color;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;'>This
+query is on the <i>std</i> relation and will find all points contained on or
+within the box specified; here the box is completely specified by the end
+points of the diagonal. Note that we still have to do a GROUP BY, since the <i>@</i>
+operator will list points that are on the border, however these will be very
+few.</span></p>
+
+<p class=MsoNormal style='text-indent:10.1pt'><span
+style='font-size:14.0pt;'>Figure 3</span><span
+style='font-size:14.0pt;'> illustrates the time to
+execute the queries for various query ranges; the data range is constant
+(5,&nbsp;1000). For range queries on the entire range ((5,&nbsp;1000)) the new
+technique performs significantly faster than the straightforward approach. It
+can be further noticed that the query takes constant time irrespective of the
+query range, this is due to the fact that the GROUP BY clause in the first
+query will have to process the entire output. As the query becomes more
+selective, this difference diminishes. But for the second query, there are
+effectively two ranges and the total selectivity remains more or less constant.</span></p>
+
+<p class=MsoNormal style='text-indent:10.1pt'><span style='font-size:14.0pt;'>Some smart query optimizers process data and store a
+slew of statistics. Figure
+4 depicts the impact of data range on the query
+execution, and shows that it has no effect. Further tests need to be conducted
+using the analyze data feature in PostgreSQL to draw a definitive conclusion.
+Also, the distribution of the points is normal and the data set is synthetic,
+it would be interesting to run the tests on real world data.</span></p>
+
+<p class=MsoNormal style='text-indent:10.1pt'><span style='font-size:14.0pt;'>Another interesting experiment is how the algorithm
+scales as the number of colors increase; this is depicted in Figure 5. The algorithm takes more time to process the query
+as the number of colors increase. This is intuitive, since the algorithm is
+output sensitive. What is interesting is that it still performs better than the
+ordinary case, even when the output size is large and tends towards the total
+number of tuples. It must be clarified that the <i>colors</i> on the <i>x</i>-axis
+is the range of colors that can be generated randomly, the number of distinct
+colors will be lesser. Further studies indicate that the two queries take the
+same amount of time when the number of distinct colors is the same as (or
+greater than) the total number of points.</span></p>
+
+<p class=MsoNormal style='text-indent:10.1pt'></p>
+
+<p class=MsoNormal style='text-indent:10.1pt'><span style='font-size:14.0pt;'>Figure 6</span><span
+style='font-size:14.0pt;'> Shows the scalability of
+the algorithm as the number of tuples increase, query range was the same as the
+data range. The lower line represents the performance of our algorithm, and the
+top line is the worst-case query time on the <i>gen</i> relation. In both
+cases, the time taken increases linearly with the number of tuples, however the
+slope of the line for the <i>std</i> relation is an order of magnitude lesser
+than the ordinary case. This is intuitive, since GROUP BY clause for the
+ordinary query must process the entire output (query range is the same as the
+data range), while in our case, very few duplicates are present (strictly, no
+duplicates will be preset, but recall the use of the @ operator). </span></p>
+
+<table border=0 cellspacing=0 cellpadding=0 align=left width=628
+ style='width:471.1pt;border-collapse:collapse;'>
+ <tr>
+  <td width=314 valign=top style='width:235.55pt;padding:0in 2.9pt 0in 2.9pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt;'><img border=0 width=303 height=244
+  src="./Report_files/image008.gif"></span></p>
+  <p class=MsoCaption><a name="_Ref8557340"></a><a name="_Toc8624817"><span style='font-size:14.0pt;'>Figure 5</span></a><span style='font-size:14.0pt;'>: </span><span
+  style='font-size:14.0pt;font-weight:normal'>Scalability
+  of the algorithm as the number of colors increase</span></p>
+  </td>
+  <td width=314 valign=top style='width:235.55pt;padding:0in 2.9pt 0in 2.9pt'>
+  <p class=MsoNormal><span style='font-size:14.0pt;'><img border=0 width=300 height=242
+  src="./Report_files/image010.gif"><a name="_Ref8546418"></a></span></p>
+  <p class=MsoCaption><a
+  name="_Toc8624818"><span style='font-size:14.0pt;'>Figure
+  6</span></a></span><span style='font-size:14.0pt;'>:</span><span
+  style='font-size:14.0pt;font-weight:normal'>
+  Scalability of the algorithm as the number of tuples increase</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='font-size:14.0pt;'>&nbsp;</span></p>
+
+<h1 style='margin-left:0in;text-indent:0in'><a name="_Toc8624811"><span
+style='font-size:14.0pt;font-variant:normal;
+text-transform:uppercase'>VI.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:14.0pt;
+font-variant:normal;text-transform:uppercase'>Conclusion</span></a></h1>
+
+<p class=MsoNormal><span style='font-size:14.0pt;'>We
+implemented the Generalized 1D Range Searching using the PostgreSQL database
+system. The algorithm is a technique to preprocess a set of colored points, so
+that given a query range we need not perform duplicate elimination û a costly
+process. We were able to reduce the worst case running time of queries on these
+classes of problems by an order of magnitude. Further, as our studies indicate
+this algorithm scales well with both increase in colors and tuples. </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;'>Some
+of the issues that are not addressed by this study include 2D and higher range searches
+and counting. Some interesting observation were made, when the strings in t1 to
+t5 are really huge, the performance degrades drastically for both cases and
+this needs to be further investigated û we need to understand implementation of
+internal algorithms used by PostgreSQL in order to explain this. One of the
+most common queries involve aggregation, they are of the form:</span></p>
+
+<p class=MsoNormal style='margin-left:40.4pt;text-indent:-17.9pt'><span
+style='font-size:14.0pt;font-family:"Courier New"'>SELECT
+max(x) FROM std WHERE coord @ box </span><span style='font-size:14.0pt;font-family:Symbol;'>ó</span><span style='font-size:
+14.0pt;font-family:"Courier New"'>((start_range,
+ground), (end_range, start_range))</span><span style='font-size:14.0pt;font-family:Symbol;'>ó</span><span style='font-size:
+14.0pt;font-family:"Courier New"'> GROUP BY color;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;'>How
+can we make this work? Intuitively the min() case will be easy to implement,
+since the points are sorted in non-decreasing order and we will always have the
+minimum of any given color in the query range. Similarly, with slight
+modifications to the algorithm (sort in non-increasing order and use successor
+points), we can make the max() case to work. But can we make both these to
+work? We need to do further studies in the area of aggregated range queries and
+how these can be implemented efficiently.</span></p>
+
+<p class=ReferenceHead><a name="_Toc8624812"><span style='font-size:14.0pt;font-variant:normal;text-transform:uppercase'>References</span></a></p>
+
+<p class=References><a name="_Ref8114949"><span
+style='font-size:14.0pt;'>[1]<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span style='font-size:14.0pt;'>A.
+V. Aho, J. E. Hopcroft, and J. D. Ullman. ô<i>Data Structures and Algorithms</i>ö</span></a><span
+style='font-size:14.0pt;'>, Addison Wesley Press, 1983.</span></p>
+
+<p class=References><span style='font-size:14.0pt;'>[2]<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span style='font-size:14.0pt;'>Antonin
+Guttman, ô<i>R-Trees: A Dynamic Index Structure for Spatial Searching</i>ö,
+SIGMOD Conference 1984: 47-57.</span></p>
+
+<p class=References><a name="_Ref8047263"><span
+style='font-size:14.0pt;'>[3]<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span style='font-size:14.0pt;'>Bernard
+Chazelle and Leonidas J. Guibas, ô<i>Fractional Cascading: I. A Data
+Structuring Technique</i>ö</span></a><span style='font-size:14.0pt;'>, Algorithmica Vol. 1, No. 2, pp. 133-162.</span></p>
+
+<p class=References><span style='font-size:14.0pt;'>[4]<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span style='font-size:14.0pt;'>Dictionary
+of Algorithms and Data Structures <a href="http://www.nist.gov/dads/">http://www.nist.gov/dads/</a>.</span></p>
+
+<p class=References><span style='font-size:14.0pt;'>[5]<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span style='font-size:14.0pt;'>Hanan
+Samet, ô<i>Range Trees and Priority Search Trees</i>ö.</span></p>
+
+<p class=References><span style='font-size:14.0pt;'>[6]<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span style='font-size:14.0pt;'>Joseph
+M. Hellerstein, Jeffrey F. Naughton, Avi Pfeffer, ô<i>Generalized Search Trees
+for Database Systems</i>ö, Proc. 21st Int. Conf. Very Large Data Bases, VLDB.</span></p>
+
+<p class=References><span style='font-size:14.0pt;'>[7]<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span style='font-size:14.0pt;'>Pankaj
+K. Agarwal, ô<i>Range Searching</i>ö, CRC Handbook of Computational Geometry
+(J. Goodmand and J. O'Rourke, eds.).</span></p>
+
+<p class=References><a name="_Ref8113664"><span
+style='font-size:14.0pt;'>[8]<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span style='font-size:14.0pt;'>Pankaj
+K. Agarwal, Satish Govindarajan, S. Muthukrishnan, ô<i>Range Searching in
+Categorical Data: Colored Range Searching on Grid</i>ö</span></a><span
+style='font-size:14.0pt;'>.</span></p>
+
+<p class=References><a name="_Ref8625627"><span
+style='font-size:14.0pt;'>[9]<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span style='font-size:14.0pt;'>Paolo
+Ferragina, Nick Koudas, S. Muthukrishnan, Divesh Srivastava, ô<i>Two-dimensional
+Substring Indexing</i>ö, In PODS, 2001.</span></a></p>
+
+<p class=References><a name="_Ref8115196"><span
+style='font-size:14.0pt;'>[10]<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:14.0pt;'>PostgreSQL
+documentation </span></a><a
+href="http://www.postgresql.org/users-lounge/docs/7.2/postgres/"><span style='font-size:14.0pt;'>http://www.postgresql.org/users-lounge/docs/7.2/postgres/</span></a><span
+style='font-size:14.0pt;'>.</span></p>
+
+<p class=References><a name="_Ref8047289"><span
+style='font-size:14.0pt;'>[11]<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:14.0pt;'>Prosenjit
+Gupta, Ravi Janardhan, and Michiel Smid, ô<i>Further results on Generalized
+Intersection Searching Problems: Counting, Reporting and Dynamization</i>ö</span></a><span
+style='font-size:14.0pt;'>, Journal Of Algorithms 19,
+282-317 (1995).</span></p>
+
+<p class=References><span style='font-size:14.0pt;'>[12]<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:14.0pt;'>Prosenjit
+Gupta, Ravi Janardhan, Michiel Smid, ô<i>Algorithms for generalized halfspace
+range searching and other intersection searching problems</i>ö, Computational
+Geometry: Theory and Applications, 5, 321-340/</span></p>
+
+<p class=References><a name="_Ref8044687"><span
+style='font-size:14.0pt;'>[13]<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:14.0pt;'>S.
+Muthukrishnan, ô<i>Efficient Algorithms for Document Retrieval Problems</i>ö</span></a><span
+style='font-size:14.0pt;'>, In SODA, 2002.</span></p>
+
+</div>
+
+</body>
+
+</html>

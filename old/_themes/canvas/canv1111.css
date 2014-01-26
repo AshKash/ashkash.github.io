@@ -1,0 +1,161 @@
+.mstheme     { nav-banner-image: url(acnvbnr.gif); separator-image: url(acnvrule.gif); 
+               list-image-1: url(acnvbul1.gif); list-image-2: 
+               url(acnvbul2.gif); list-image-3: url(acnvbul3.gif); 
+               navbutton-horiz-pushed: url(cnvhbp.gif); 
+               navbutton-horiz-normal: url(cnvhbs.gif); 
+               navbutton-horiz-hovered: url(cnvhbh.gif); 
+               navbutton-vert-pushed: url(cnvvbp.gif); navbutton-vert-normal: 
+               url(cnvvbs.gif); navbutton-vert-hovered: url(cnvvbh.gif); 
+               navbutton-home-normal: url(cnvhomes.gif); 
+               navbutton-home-hovered: url(cnvhomeh.gif); 
+               navbutton-home-pushed: url(cnvhomes.gif); navbutton-up-normal: 
+               url(cnvups.gif); navbutton-up-hovered: url(cnvuph.gif); 
+               navbutton-up-pushed: url(cnvups.gif); navbutton-prev-normal: 
+               url(cnvprevs.gif); navbutton-prev-hovered: url(cnvprevh.gif); 
+               navbutton-prev-pushed: url(cnvprevs.gif); 
+               navbutton-next-normal: url(cnvnexts.gif); 
+               navbutton-next-hovered: url(cnvnexth.gif); 
+               navbutton-next-pushed: url(cnvnexts.gif) }
+.mstheme-bannertxt { font-family: Arial, Arial, Helvetica; font-size: 6; color: rgb(255,255,255) }
+.mstheme-horiz-navtxt { font-family: Arial, Arial, Helvetica; font-size: 2; font-weight: bold; color: 
+               rgb(255,255,255) }
+.mstheme-vert-navtxt { font-family: Arial, Arial, Helvetica; font-size: 2; font-weight: bold; color: 
+               rgb(255,255,255) }
+.mstheme-navtxthome { font-family: Arial, Arial, Helvetica; font-size: 1; color: rgb(51,0,153) }
+.mstheme-navtxtup { font-family: Arial, Arial, Helvetica; font-size: 1; color: rgb(51,0,153) }
+.mstheme-navtxtprev { font-family: Arial, Arial, Helvetica; font-size: 1; color: rgb(51,0,153) }
+.mstheme-navtxtnext { font-family: Arial, Arial, Helvetica; font-size: 1; color: rgb(51,0,153) }
+ul           { list-style-image: url('acnvbul1.gif') }
+ul ul        { list-style-image: url('acnvbul2.gif') }
+ul ul ul     { list-style-image: url('acnvbul3.gif') }
+a:link       { color: rgb(102,51,153) }
+a:visited    { color: rgb(0,102,153) }
+a:active     { color: rgb(51,153,153) }
+body         { color: rgb(0,0,102); background-color: rgb(255,255,204) }
+h1           { color: rgb(102,51,153) }
+h2, marquee  { color: rgb(102,51,153) }
+h3           { color: rgb(102,51,153) }
+h4           { color: rgb(102,51,153) }
+h5           { color: rgb(102,51,153) }
+h6           { color: rgb(102,51,153) }
+button       { background-color: rgb(102,51,153); color: white; border-color: rgb(51,153,153) }
+label, .MSTHEME-LABEL { color: rgb(0,0,102) }
+textarea     { color: black; border-color: rgb(0,102,153) }
+fieldset     { color: black; border-color: rgb(0,102,153) }
+legend       { color: rgb(102,51,153) }
+select       { color: black; border-color: rgb(0,102,153) }
+table        { table-border-color-light: rgb(51,153,153); table-border-color-dark: 
+               rgb(0,102,153); color: rgb(0,0,102); border-color: 
+               rgb(0,102,153) }
+caption      { color: rgb(102,51,153) }
+th           { color: rgb(0,0,102) }
+hr           { color: rgb(102,51,153) }
+td           { border-color: rgb(0,102,153) }
+.mstheme-bannertxt a:active { color: rgb(0,0,102) }
+.mstheme-bannertxt a:link { color: rgb(0,0,102) }
+.mstheme-bannertxt a:visited { color: rgb(0,0,102) }
+.mstheme-bannertxt-g { font-family: Arial, Arial, Helvetica; font-size: 6; color: rgb(0,0,102); 
+               vertical-align: top; background-image: url('cnvbnr.gif') }
+.mstheme-bannertxt-g a:active { color: rgb(0,0,102) }
+.mstheme-bannertxt-g a:link { color: rgb(0,0,102) }
+.mstheme-bannertxt-g a:visited { color: rgb(0,0,102) }
+.mstheme-bannertxt-s { font-family: Arial, Arial, Helvetica; font-size: 6; color: rgb(0,0,102); 
+               vertical-align: top }
+.mstheme-bannertxt-s a:active { color: rgb(0,0,102) }
+.mstheme-bannertxt-s a:link { color: rgb(0,0,102) }
+.mstheme-bannertxt-s a:visited { color: rgb(0,0,102) }
+.mstheme-horiz-navtxt a:active { color: rgb(255,255,255) }
+.mstheme-horiz-navtxt a:link { color: rgb(255,255,255) }
+.mstheme-horiz-navtxt a:visited { color: rgb(255,255,255) }
+.mstheme-horiz-navtxt-g { font-family: Arial, Arial, Helvetica; font-size: 2; color: rgb(255,255,255); 
+               background-image: url('cnvphb.gif') }
+.mstheme-horiz-navtxt-g a:active { color: rgb(255,255,255) }
+.mstheme-horiz-navtxt-g a:link { color: rgb(255,255,255) }
+.mstheme-horiz-navtxt-g a:visited { color: rgb(255,255,255) }
+.mstheme-horiz-navtxt-gs { font-family: Arial, Arial, Helvetica; font-size: 2; color: rgb(255,255,255); 
+               background-image: url('cnvphbp.gif') }
+.mstheme-horiz-navtxt-gs a:active { color: rgb(255,255,255) }
+.mstheme-horiz-navtxt-gs a:link { color: rgb(255,255,255) }
+.mstheme-horiz-navtxt-gs a:visited { color: rgb(255,255,255) }
+.mstheme-navtxthome a:active { color: rgb(0,51,0) }
+.mstheme-navtxthome a:link { color: rgb(0,51,0) }
+.mstheme-navtxthome a:visited { color: rgb(0,51,0) }
+.mstheme-navtxthome-g { font-family: Arial, Arial, Helvetica; font-size: 1; color: rgb(0,51,0); 
+               background-image: url('cnvhome.gif') }
+.mstheme-navtxthome-g a:active { color: rgb(0,51,0) }
+.mstheme-navtxthome-g a:link { color: rgb(0,51,0) }
+.mstheme-navtxthome-g a:visited { color: rgb(0,51,0) }
+.mstheme-navtxtnext a:active { color: rgb(0,51,0) }
+.mstheme-navtxtnext a:link { color: rgb(0,51,0) }
+.mstheme-navtxtnext a:visited { color: rgb(0,51,0) }
+.mstheme-navtxtnext-g { font-family: Arial, Arial, Helvetica; font-size: 1; color: rgb(0,51,0); 
+               background-image: url('cnvnext.gif') }
+.mstheme-navtxtnext-g a:active { color: rgb(0,51,0) }
+.mstheme-navtxtnext-g a:link { color: rgb(0,51,0) }
+.mstheme-navtxtnext-g a:visited { color: rgb(0,51,0) }
+.mstheme-navtxtprev a:active { color: rgb(0,51,0) }
+.mstheme-navtxtprev a:link { color: rgb(0,51,0) }
+.mstheme-navtxtprev a:visited { color: rgb(0,51,0) }
+.mstheme-navtxtprev-g { font-family: Arial, Arial, Helvetica; font-size: 1; color: rgb(0,51,0); 
+               background-image: url('cnvprev.gif') }
+.mstheme-navtxtprev-g a:active { color: rgb(0,51,0) }
+.mstheme-navtxtprev-g a:link { color: rgb(0,51,0) }
+.mstheme-navtxtprev-g a:visited { color: rgb(0,51,0) }
+.mstheme-navtxtup a:active { color: rgb(0,51,0) }
+.mstheme-navtxtup a:link { color: rgb(0,51,0) }
+.mstheme-navtxtup a:visited { color: rgb(0,51,0) }
+.mstheme-navtxtup-g { font-family: Arial, Arial, Helvetica; font-size: 1; color: rgb(0,51,0); 
+               background-image: url('cnvup.gif') }
+.mstheme-navtxtup-g a:active { color: rgb(0,51,0) }
+.mstheme-navtxtup-g a:link { color: rgb(0,51,0) }
+.mstheme-navtxtup-g a:visited { color: rgb(0,51,0) }
+.mstheme-topbar-font a:active { color: rgb(0,0,102) }
+.mstheme-topbar-font a:link { color: rgb(0,0,102) }
+.mstheme-topbar-font a:visited { color: rgb(0,0,102) }
+.mstheme-topbar-font-g { font-family: Arial, Arial, Helvetica; font-size: 1; color: rgb(0,0,102); 
+               background-image: url('cnvglb.gif') }
+.mstheme-topbar-font-g a:active { color: rgb(0,0,102) }
+.mstheme-topbar-font-g a:link { color: rgb(0,0,102) }
+.mstheme-topbar-font-g a:visited { color: rgb(0,0,102) }
+.mstheme-vert-navtxt a:active { color: rgb(255,255,255) }
+.mstheme-vert-navtxt a:link { color: rgb(255,255,255) }
+.mstheme-vert-navtxt a:visited { color: rgb(255,255,255) }
+.mstheme-vert-navtxt-g { font-family: Arial, Arial, Helvetica; font-size: 2; color: rgb(255,255,255); 
+               background-image: url('cnvpvb.gif') }
+.mstheme-vert-navtxt-g a:active { color: rgb(255,255,255) }
+.mstheme-vert-navtxt-g a:link { color: rgb(255,255,255) }
+.mstheme-vert-navtxt-g a:visited { color: rgb(255,255,255) }
+.mstheme-vert-navtxt-gs { font-family: Arial, Arial, Helvetica; font-size: 2; color: rgb(255,255,255); 
+               background-image: url('cnvpvbp.gif') }
+.mstheme-vert-navtxt-gs a:active { color: rgb(255,255,255) }
+.mstheme-vert-navtxt-gs a:link { color: rgb(255,255,255) }
+.mstheme-vert-navtxt-gs a:visited { color: rgb(255,255,255) }
+.mstheme     { navbutton-background-color: rgb(255,255,204); top-bar-button: url(cnvglb.gif) }
+.mstheme-topbar-font { font-family: Arial, Arial, Helvetica; font-size: 1; color: rgb(0,0,102) }
+body         { font-family: Arial, Arial, Helvetica; background-image: url('cnvbkgnd.jpg') }
+h1           { font-family: Arial, Arial, Helvetica; font-weight: normal; font-style: normal; 
+               font-size: 24pt }
+h2           { font-family: Arial, Arial, Helvetica; font-weight: normal; font-style: normal; 
+               font-size: 18pt }
+h3           { font-family: Arial, Arial, Helvetica; font-weight: normal; font-style: normal; 
+               font-size: 14pt }
+h4           { font-family: Arial, Arial, Helvetica; font-weight: normal; font-style: normal; 
+               font-size: 12pt }
+h5           { font-family: Arial, Arial, Helvetica; font-weight: normal; font-style: normal; 
+               font-size: 10pt }
+h6           { font-family: Arial, Arial, Helvetica; font-weight: normal; font-style: normal; 
+               font-size: 8pt }
+button       { font-size: 8pt; font-family: Arial, Arial, Helvetica; font-style: normal; 
+               border-style: solid; border-width: 1pt }
+label, .MSTHEME-LABEL { font-size: 8pt; font-family: Arial, Arial, Helvetica; font-style: normal }
+textarea     { font-size: 8pt; font-family: Arial, Arial, Helvetica; font-style: normal; 
+               border-style: solid; border-width: 1pt }
+fieldset     { font-size: 8pt; font-family: Arial, Arial, Helvetica; font-style: normal; 
+               border-style: solid; border-width: 1pt }
+legend       { font-size: 8pt; font-family: Arial, Arial, Helvetica; font-style: normal }
+select       { font-size: 8pt; font-family: Arial, Arial, Helvetica; font-style: normal; 
+               border-style: solid; border-width: 1pt }
+table        { font-family: Arial, Arial, Helvetica; font-style: normal }
+caption      { font-size: 14pt; font-family: Arial, Arial, Helvetica; font-style: normal }
+th           { font-family: Arial, Arial, Helvetica; font-style: normal }
+marquee      { font-size: 14pt; font-family: Arial, Arial, Helvetica }
